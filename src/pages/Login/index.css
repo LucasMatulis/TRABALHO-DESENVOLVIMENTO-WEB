@@ -1,0 +1,8 @@
+.logo {
+  display: flex;
+  flex-direction: column;
+}
+.logo img {
+  height: 85px;
+  width: 171px;
+}/*# sourceMappingURL=index.css.map */
