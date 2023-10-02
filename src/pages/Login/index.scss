@@ -1,9 +1,12 @@
 
-
+body{
+    background-image: url("../../../public/assets/images/fundo.png");
+}
 
 .logo{
     display: flex;
     flex-direction: column;
+    
 
 
     img{
