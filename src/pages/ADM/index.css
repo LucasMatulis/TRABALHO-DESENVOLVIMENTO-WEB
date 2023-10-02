@@ -1,0 +1,17 @@
+.body {
+  background-image: url("../../../public/assets/images/fundo.png");
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+}
+.logo img {
+  height: 85px;
+  width: 171px;
+}/*# sourceMappingURL=index.css.map */
+
+.h1 {
+  font-family: 'Zilla Slab Highlight', serif;
+  color:#D33F3F
+}
