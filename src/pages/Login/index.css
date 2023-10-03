@@ -14,6 +14,8 @@ body, html {
   background-image: url("../../../public/assets/images/fundo.png");
   overflow-y: hidden;
   overflow-x: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .logo {
@@ -74,8 +76,8 @@ body, html {
 .Bloco1 .entrar {
   position: relative;
   left: 830px;
+  top: 100px;
   width: 281px;
-  padding-top: 50px;
   text-decoration: none;
   font: 40px retrofont;
   color: #D33F3F;
@@ -102,7 +104,8 @@ body, html {
     left: -600px;
   }
   .Bloco1 .entrar {
-    padding-top: 200px;
+    position: relative;
+    top: 200px;
   }
 }
 @media (max-width: 414px) {
@@ -124,5 +127,28 @@ body, html {
   .Bloco1 .entrar {
     position: relative;
     left: 675px;
+  }
+}
+@media (max-width: 375px) {
+  .Bloco1 .Login {
+    position: relative;
+    left: 680px;
+    font: 40px retrofont;
+  }
+  .Bloco1 div {
+    position: relative;
+    left: -50px;
+  }
+  .Bloco1 div label input {
+    width: 200px;
+  }
+  .Bloco1 div img {
+    left: 720px;
+  }
+  .Bloco1 .entrar {
+    position: relative;
+    top: 100px;
+    left: 675px;
+    font: 30px retrofont;
   }
 }/*# sourceMappingURL=index.css.map */
