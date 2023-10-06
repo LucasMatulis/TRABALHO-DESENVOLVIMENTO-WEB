@@ -72,15 +72,21 @@ div .cadastro {
   height: 430.67px;
   width: 1306.41px;
   background-color: #D33F3F;
+  position: relative;
+  left: 15%;
 }
 div .cadastro .imagem {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  position: relative;
+  left: 3%;
+  top: 3%;
 }
 div .cadastro .imagem .stock {
   height: 281px;
   width: 300px;
+  border-radius: 25px;
 }
 div .cadastro .imagem .link {
   background-color: #C2B7B4;
@@ -90,8 +96,12 @@ div .cadastro .inputs {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  position: relative;
+  top: 3%;
 }
 div .cadastro .inputs label {
+  position: relative;
+  left: 10%;
   font: 20px inter;
   font-weight: bold;
 }
@@ -99,9 +109,14 @@ div .cadastro .inputs .adicionar {
   position: relative;
   height: 89.16px;
   width: 337.86px;
-  left: 100%;
+  left: 70%;
+  font: 40px inter;
+  font-weight: bold;
+  color: #D33F3F;
 }
 div .cadastro .inputs input {
+  position: relative;
+  left: 10%;
   height: 99.73px;
   width: 852.76px;
   background-color: #C2B7B4;
