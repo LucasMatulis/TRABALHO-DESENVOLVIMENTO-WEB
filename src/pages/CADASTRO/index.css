@@ -65,4 +65,46 @@ div .titulo {
   text-align: center;
   position: relative;
   left: 500px;
+}
+div .cadastro {
+  display: flex;
+  flex-direction: row;
+  height: 430.67px;
+  width: 1306.41px;
+  background-color: #D33F3F;
+}
+div .cadastro .imagem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+div .cadastro .imagem .stock {
+  height: 281px;
+  width: 300px;
+}
+div .cadastro .imagem .link {
+  background-color: #C2B7B4;
+  border: none;
+}
+div .cadastro .inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+div .cadastro .inputs label {
+  font: 20px inter;
+  font-weight: bold;
+}
+div .cadastro .inputs .adicionar {
+  position: relative;
+  height: 89.16px;
+  width: 337.86px;
+  left: 100%;
+}
+div .cadastro .inputs input {
+  height: 99.73px;
+  width: 852.76px;
+  background-color: #C2B7B4;
+  border: none;
+  font-size: xx-large;
 }/*# sourceMappingURL=index.css.map */

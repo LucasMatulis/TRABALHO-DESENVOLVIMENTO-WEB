@@ -75,5 +75,56 @@
         left: 500px;
     }
 
+    .cadastro{
+      display: flex;
+      flex-direction: row;
+      height: 430.67px;
+      width: 1306.41px;
+      background-color: #D33F3F;
+
+      .imagem{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+          .stock{
+            height: 281px;
+            width: 300px;
+          }
+
+          .link{
+            background-color: #C2B7B4;
+            border: none;
+          }
+      }
+
+      .inputs{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+
+        label{
+          font: 20px inter;
+          font-weight: bold;
+          
+        }
+
+        .adicionar{
+          position: relative;
+          height: 89.16px;
+          width: 337.86px;
+          left: 100%;
+        }
+
+        input{
+          height: 99.73px;
+          width: 852.76px;
+          background-color: #C2B7B4;
+          border: none;
+          font-size: xx-large;
+        }
+      }
+    }
+
 
   }
