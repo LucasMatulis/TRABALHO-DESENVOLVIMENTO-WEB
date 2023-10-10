@@ -122,4 +122,15 @@ li {
   background-color: #C2B7B4;
   border: none;
   font-size: xx-large;
+}
+
+.pesquisa {
+  margin-top: 10px;
+  position: relative;
+  left: 26%;
+  height: 64px;
+  width: 852px;
+  background-color: #C2B7B4;
+  border: none;
+  font-size: xx-large;
 }/*# sourceMappingURL=index.css.map */
