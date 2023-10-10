@@ -114,6 +114,9 @@ div .cadastro .inputs .adicionar {
   font-weight: bold;
   color: #D33F3F;
 }
+div .cadastro .inputs .adicionar:hover {
+  cursor: pointer;
+}
 div .cadastro .inputs input {
   position: relative;
   left: 10%;

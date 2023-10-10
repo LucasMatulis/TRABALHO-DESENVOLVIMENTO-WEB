@@ -126,6 +126,10 @@
           font: 40px inter;
           font-weight: bold;
           color: #D33F3F;
+
+          &:hover{
+            cursor: pointer;
+          }
         }
 
         input{

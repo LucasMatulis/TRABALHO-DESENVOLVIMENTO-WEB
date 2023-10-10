@@ -1,0 +1,125 @@
+@font-face {
+  font-family: retrofont;
+  src: url(../../../public/assets/fonts/retro.woff);
+}
+@font-face {
+  font-family: inter;
+  src: url(../../../public/assets/fonts/inter.ttf);
+}
+@font-face {
+  font-family: inria;
+  src: url(../../../public/assets/fonts/Inria.ttf);
+}
+body, html {
+  background-image: url("../../../public/assets/images/fundo.png");
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+}
+
+.cabecalho {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  gap: 100px;
+}
+.cabecalho a {
+  position: relative;
+  text-decoration: none;
+  font: 16px inter;
+  height: -moz-fit-content;
+  height: fit-content;
+  top: 20px;
+  color: black;
+}
+.cabecalho a:hover {
+  text-decoration: underline;
+}
+.cabecalho .logo {
+  position: relative;
+  left: 900px;
+  display: flex;
+  flex-direction: column;
+}
+.cabecalho .logo strong {
+  font: 16px inter;
+  font-weight: bolder;
+  text-align: center;
+}
+.cabecalho .logo img {
+  height: 51px;
+  width: 140px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.cadastro {
+  display: flex;
+  flex-direction: row;
+  height: 320.67px;
+  width: 1205.16px;
+  background-color: #D33F3F;
+  position: relative;
+  left: 15%;
+}
+.cadastro .imagem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  left: 3%;
+  top: 3%;
+}
+.cadastro .imagem .stock {
+  height: 250px;
+  width: 250px;
+  border-radius: 25px;
+}
+.cadastro .imagem .link {
+  background-color: #C2B7B4;
+  border: none;
+}
+.cadastro .inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  top: 3%;
+}
+.cadastro .inputs label {
+  position: relative;
+  left: 10%;
+  font: 20px inter;
+  font-weight: bold;
+}
+.cadastro .inputs .botao {
+  position: relative;
+  height: 63.49px;
+  width: 311.68px;
+  left: 40%;
+  font: 40px inter;
+  font-weight: bold;
+  color: #D33F3F;
+}
+.cadastro .inputs .botao:hover {
+  cursor: pointer;
+}
+.cadastro .inputs input {
+  position: relative;
+  left: 10%;
+  height: 71.02px;
+  width: 786.62px;
+  background-color: #C2B7B4;
+  border: none;
+  font-size: xx-large;
+}/*# sourceMappingURL=index.css.map */
