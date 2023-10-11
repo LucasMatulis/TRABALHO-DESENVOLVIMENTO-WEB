@@ -67,20 +67,35 @@ ul{
     list-style-type: none 
   }
 
-  .cadastro{
+  .jogo{
     display: flex;
     flex-direction: row;
-    height: 320.67px;
+    height: 206.8px;
     width: 1205.16px;
     background-color: #D33F3F;
     position: relative;
     left: 15%;
 
+        h1{
+          font:85px inria
+        }
+
+        .nome{
+          position: relative;
+          left: 5%;
+          bottom: 30%;
+          width:700px ;
+        }
+
+        .preco{
+          position: relative;
+          color: white;
+          width: 328px;
+        }
 
         .stock{
-          height: 250px;
+          height: 206.8px;
           width: 250px;
-          border-radius: 25px;
         }
   }
 

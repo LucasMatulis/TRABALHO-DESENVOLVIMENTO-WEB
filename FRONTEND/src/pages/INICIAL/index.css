@@ -61,65 +61,32 @@ li {
   list-style-type: none;
 }
 
-.cadastro {
+.jogo {
   display: flex;
   flex-direction: row;
-  height: 320.67px;
+  height: 206.8px;
   width: 1205.16px;
   background-color: #D33F3F;
   position: relative;
   left: 15%;
 }
-.cadastro .imagem {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  position: relative;
-  left: 3%;
-  top: 3%;
+.jogo h1 {
+  font: 85px inria;
 }
-.cadastro .imagem .stock {
-  height: 250px;
+.jogo .nome {
+  position: relative;
+  left: 5%;
+  bottom: 30%;
+  width: 700px;
+}
+.jogo .preco {
+  position: relative;
+  color: white;
+  width: 328px;
+}
+.jogo .stock {
+  height: 206.8px;
   width: 250px;
-  border-radius: 25px;
-}
-.cadastro .imagem .link {
-  background-color: #C2B7B4;
-  border: none;
-}
-.cadastro .inputs {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  position: relative;
-  top: 3%;
-}
-.cadastro .inputs label {
-  position: relative;
-  left: 10%;
-  font: 20px inter;
-  font-weight: bold;
-}
-.cadastro .inputs .botao {
-  position: relative;
-  height: 63.49px;
-  width: 311.68px;
-  left: 40%;
-  font: 40px inter;
-  font-weight: bold;
-  color: #D33F3F;
-}
-.cadastro .inputs .botao:hover {
-  cursor: pointer;
-}
-.cadastro .inputs input {
-  position: relative;
-  left: 10%;
-  height: 71.02px;
-  width: 786.62px;
-  background-color: #C2B7B4;
-  border: none;
-  font-size: xx-large;
 }
 
 .pesquisa {
