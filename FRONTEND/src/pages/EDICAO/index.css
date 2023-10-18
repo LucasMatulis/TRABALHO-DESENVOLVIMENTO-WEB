@@ -38,13 +38,10 @@ body, html {
   text-decoration: underline;
 }
 .cabecalho .logo {
+  position: relative;
+  left: 900px;
   display: flex;
- align-items: center;
- justify-content: space-between;
-right: 80%;
-margin: auto;
-
-
+  flex-direction: column;
 }
 .cabecalho .logo strong {
   font: 16px inter;
@@ -66,11 +63,6 @@ li {
   list-style-type: none;
 }
 
-lii {
-  list-style-type: none;
-}
-
-
 .cadastro {
   display: flex;
   flex-direction: row;
@@ -78,7 +70,7 @@ lii {
   width: 1205.16px;
   background-color: #D33F3F;
   position: relative;
-  left: 10%;
+  left: 15%;
 }
 .cadastro .imagem {
   display: flex;
@@ -95,7 +87,9 @@ lii {
 }
 .cadastro .imagem .link {
   background-color: #C2B7B4;
+  border-radius: 25px;
   border: none;
+  font: 13px inter;
 }
 .cadastro .inputs {
   display: flex;
@@ -136,165 +130,10 @@ lii {
   margin-top: 10px;
   position: relative;
   left: 26%;
-  height: 64%;
+  height: 64px;
   width: 852px;
   background-color: #C2B7B4;
   border: none;
   font-size: xx-large;
+  font: 40px inter;
 }/*# sourceMappingURL=index.css.map */
-
-@media  screen and (max-width: 1459px) {
-
-
-  .cadastro {
-    display: flex;
-    flex-direction: row;
-    height: 320.67px;
-    width: 1205.16px;
-    background-color: #D33F3F;
-    position: relative;
-    left: 1%;
-  }
-
-  .pesquisa {
-    margin-top: 10px;
-    position: relative;
-    left: 18%;
-    height: 64%;
-    width: 852px;
-    background-color: #C2B7B4;
-    border: none;
-    font-size: xx-large;
-  }
-
-  
-}
-
-@media screen and (max-width:415px) {
- 
-  .cabecalho {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    background-color: white;
-    gap: 17px;
-  }
-  .cabecalho a {
-    position: relative;
-    text-decoration: none;
-    font: 13px inter;
-    height: -moz-fit-content;
-    height: fit-content;
-    top: 26px;
-    color: black;
-  }
-  .cabecalho a:hover {
-    text-decoration: underline;
-  }
-  .cabecalho .logo {
-    position: relative;
-    left: 1%;
-    display: flex;
-    flex-direction: column;
-  }
-  .cabecalho .logo strong {
-    font: 16px inter;
-    font-weight: bolder;
-    text-align: center;
-  }
-  .cabecalho .logo img {
-    height: 51px;
-    width: 102px;
-  }
-
-
-  .cadastro {
-    display: flex;
-    flex-direction: row;
-    height: 720px;
-    width: 379px;
-    background-color: #D33F3F;
-    position: relative;
-    left: -5%;
-  }
-  .cadastro .imagem {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    position: relative;
-    left: 18%;
-    top: 4%;
-  }
-  .cadastro .imagem .stock {
-    height: 250px;
-    width: 250px;
-    border-radius: 25px;
-  }
-  .cadastro .imagem .link {
-    background-color: #C2B7B4;
-    border: none;
-  }
-  .cadastro .inputs {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    position: relative;
-    top:50%;
-  }
-  .cadastro .inputs label {
-    position: relative;
-    left: -65%;
-    font: 20px inter;
-    font-weight: bold;
-  }
-  .cadastro .inputs .botao {
-    position: relative;
-    height: 40px;
-    width: 312px;
-    left: -63%;
-    font: 35px inter;
-    
-    font-weight: bold;
-    color: #D33F3F;
-  }
-  .cadastro .inputs .botao:hover {
-    cursor: pointer;
-  }
-  .cadastro .inputs input {
-    position: relative;
-    left: -67%;
-    height: 55px;
-    width: 345px;
-    background-color: #C2B7B4;
-    border: none;
-    font-size: xx-large;
-  }
-  
-   lii{
-    display: none;
-
-   }
-
-   .pesquisa {
-    margin-top: 10px;
-    position: relative;
-    left: 13%;
-    height: 64%;
-    width:305px;
-    background-color: #C2B7B4;
-    border: none;
-    font-size: xx-large;
-  }
-
-
-
-
-
-
-
-
-  
-}
-
-
-
