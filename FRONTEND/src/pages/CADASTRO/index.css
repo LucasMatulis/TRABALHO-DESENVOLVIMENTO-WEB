@@ -11,7 +11,10 @@
   src: url(../../../public/assets/fonts/Inria.ttf);
 }
 body, html {
-  background-image: url("../../../public/assets/images/fundo.png");
+  background-image: url("../../../public/assets/images/Bowser.webp"), url("../../../public/assets/images/mario.png"), url("../../../public/assets/images/fundo.png");
+  background-position: right 400% bottom 100%, left 130% bottom, left top;
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-size: auto, 1000px, auto;
   overflow-y: hidden;
   overflow-x: hidden;
   width: 100%;
