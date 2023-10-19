@@ -119,6 +119,11 @@
         
       }
 
+      div{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
       .botao{
         position: relative;
         height: 63.49px;
@@ -132,6 +137,7 @@
           cursor: pointer;
         }
       }
+    }
 
       input{
         position: relative;
