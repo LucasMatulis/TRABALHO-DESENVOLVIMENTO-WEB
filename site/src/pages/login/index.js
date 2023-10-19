@@ -1,12 +1,16 @@
 import { Link } from 'react-router-dom';
 import './index.scss';
+import Logo from "./logo.png"
 
 
 function Login(){
+
+    
+    
     return(
-        <section>
+        <section className='Entrada'>
                 <header className="logo">
-                    <img src="../../../public/assets/images/logo.png" className="controle"/>
+                    <img src={Logo} className="controle"/>
                     <strong>RETRO GAMES</strong>
                 </header>
 

@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
 import './index.scss';
+import Logo from "./logo.png"
 
 
 function Adm(){
     return(
         <section>
                     <header class="logo">
-                        <img src="../../../public/assets/images/logo.png" class="controle"/>
+                        <img src={Logo} class="controle"/>
                         <strong>RETRO GAMES</strong>
                     </header>
 

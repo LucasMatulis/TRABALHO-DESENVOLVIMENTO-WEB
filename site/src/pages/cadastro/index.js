@@ -1,7 +1,12 @@
 import { Link } from 'react-router-dom';
 import './index.scss';
+import Logo from "./logo.png"
+import Branco from "./branco.png"
+
 
 function Cadastro(){
+
+
 
     return(
         <section>
@@ -11,7 +16,7 @@ function Cadastro(){
         <Link class="produto" to="/edicao">EDIÇÃO DE PRODUTO</Link>
 
         <div class="logo">
-            <img src="../../../public/assets/images/logo.png" class="controle"/>
+            <img src={Logo} class="controle"/>
             <strong>RETRO GAMES</strong>
         </div>
     </header>
@@ -21,7 +26,7 @@ function Cadastro(){
 
         <div class="cadastro">
             <div class="imagem">
-                <img id="imagemPreview" src="../../../public/assets/images/branco.png" class="stock"/>
+                <img id="imagemPreview" src={Branco} class="stock"/>
                 <input type="file"  accept="image/*" name="img" id="img" class="link"/>
             </div>
             <div class="inputs">
