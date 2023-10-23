@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS `retroGames`.`Jogos` (
   `idJogo` integer NOT NULL auto_increment,
   `nomeJogo` VARCHAR(70) NOT NULL,
   `precoJogo` double NULL,
-  `imagemJogo`VARCHAR(21000) NULL,
+  `imagemJogo`BLOB NULL,
   PRIMARY KEY (`idJogo`),
   UNIQUE INDEX `idJogo_UNIQUE` (`idJogo` ASC) VISIBLE);
   

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import './index.scss';
 import Logo from "./logo.png"
+import Seta from "./Seta.png"
 
 
 function Login(){
@@ -17,11 +18,11 @@ function Login(){
                 <div className="Bloco1">
                     <h1 className="Login">LOGIN</h1>
                     <div className="InsiraNome">
-                        <img className="seta1" src="../../../public/assets/images/Seta.png"/>
+                        <img className="seta1" src={Seta}/>
                         <label>Insira seu nome<input type="text" placeholder="Nome"/></label>
                     </div>
                     <div className="InsiraSenha">
-                        <img className="seta2" src="../../../public/assets/images/Seta.png" />
+                        <img className="seta2" src={Seta} />
                         <label>Insira sua Senha<input type="password" placeholder="Senha"/></label>
                     </div>
                     <Link to="/adm" className="entrar">ENTRAR</Link>

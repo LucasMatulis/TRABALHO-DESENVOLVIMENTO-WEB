@@ -87,6 +87,7 @@ body,html{
         }
         &:hover{
             img{
+                transform: rotate(90deg);
                 visibility:inherit;
             }
         }
