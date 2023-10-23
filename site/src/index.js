@@ -6,6 +6,7 @@ import Login from './pages/login';
 import Adm from './pages/adm';
 import Cadastro from './pages/cadastro';
 import Edicao from './pages/edicao';
+import NaoEncontrado from './pages/naoEncontrado';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
@@ -20,6 +21,7 @@ root.render(
         <Route path='/adm' element={<Adm />} />
         <Route path='/cadastro' element={<Cadastro />} />
         <Route path='/edicao' element={<Edicao />} />
+        <Route path='/*' element={<NaoEncontrado />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

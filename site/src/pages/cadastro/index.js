@@ -2,10 +2,18 @@ import { Link } from 'react-router-dom';
 import './index.scss';
 import Logo from "./logo.png"
 import Branco from "./branco.png"
+import { useState } from 'react';
+
 
 
 function Cadastro(){
 
+    const [selectedImage, setSelectedImage] = useState(Branco);
+
+        const handleImageSelect = (e) => {
+            const file = e.target.files[0];
+            setSelectedImage(URL.createObjectURL(file));
+        };
 
 
     return(
@@ -26,8 +34,8 @@ function Cadastro(){
 
         <div class="cadastro">
             <div class="imagem">
-                <img id="imagemPreview" src={Branco} class="stock"/>
-                <input type="file"  accept="image/*" name="img" id="img" class="link"/>
+            {selectedImage &&<img src={selectedImage} class="stock"/>}
+                        <input type="file"  accept="image/*" class="link" onChange={handleImageSelect}/>                    
             </div>
             <div class="inputs">
                 <label for="">Inserir Nome:</label>
