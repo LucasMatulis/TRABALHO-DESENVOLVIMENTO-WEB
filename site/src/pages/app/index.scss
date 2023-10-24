@@ -14,10 +14,10 @@
 }
 
 body,html{
-  background-image: url("../../../public/assets/images/BVM.png"),url("../../../public/assets/images/WVT.png"),url("../../../public/assets/images/fundo.png");
-  background-position: right 150% bottom , left 150% bottom, left top;
+  background-image: url("../../../public/assets/images/marioClass.png"),url("../../../public/assets/images/sonicClass.png"),url("../../../public/assets/images/fundo.png");
+  background-position: left 140% top 10% , right 130% top 10%, left top ;
   background-repeat: no-repeat, no-repeat, repeat;
-  background-size: 1000px,1000px,auto;
+  background-size: 1000px,1000px,1000px,auto;
   overflow-x: hidden;
   width: 100%;
   height: 100%;
