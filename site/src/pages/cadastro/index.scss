@@ -28,6 +28,8 @@
     flex-direction: row;
     background-color: white;
     gap: 100px;
+    background-image: url("../../../public/assets/images/SMB_NES_World_1-1_Map.png");
+    background-position: left 50% top 5%;
 
     a{
         position: relative;
@@ -43,24 +45,23 @@
     }
 
     .logo{
-        position: relative;
-        left: 900px;
-        display: flex;
-        flex-direction: column;
-        
-        strong{
-            font: 16px inter;
-            font-weight: bolder;
-            text-align: center;
-            color: black;
-        }
-    
-    
-        img{
-        height: 51px;
-        width: 140px;
-        }
-    }
+      position: relative;
+      left: 900px;
+      display: flex;
+      flex-direction: column;
+      
+      strong{
+          font: 16px inter;
+          font-weight: bolder;
+          text-align: center;
+      }
+  
+  
+      img{
+      height: 51px;
+      width: 140px;
+      }
+  }
   }
 
   div{
