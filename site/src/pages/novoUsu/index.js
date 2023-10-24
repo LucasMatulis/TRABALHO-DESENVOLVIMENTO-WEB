@@ -25,7 +25,8 @@ function NovoUsu(){
                         <img className="seta2" src={Seta} />
                         <label>Insira sua Senha<input type="password" placeholder="Senha"/></label>
                     </div>
-                    <Link to="/adm" className="entrar">CADASTRAR</Link>
+                    <button className="cadastrarBU">CADASTRAR</button>
+                    <Link className="entrar" to="/login">VOLTAR</Link>
                 </div>
         </section>
     );

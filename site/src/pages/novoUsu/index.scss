@@ -105,6 +105,26 @@ body,html{
         }
 
     }
+
+    .cadastrarBU{
+        position: relative;
+        left: 760px;
+        top: 100px;
+        width: 281px;
+        text-decoration: none;
+        font: 40px retrofont ;
+        color: #D33F3F;
+        background-color: transparent; 
+        border: none;
+
+        &:hover{
+            cursor: pointer;
+            color: #e97373;
+        }
+
+    }
+
+
 }
 
 
