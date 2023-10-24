@@ -14,10 +14,6 @@
   }
 
   body,html{
-    background-image: url("../../../public/assets/images/Bowser.webp"),url("../../../public/assets/images/mario.png"),url("../../../public/assets/images/fundo.png");
-    background-position: right 400% bottom 100%, left 130% bottom, left top;
-    background-repeat: no-repeat, no-repeat, repeat;
-    background-size: auto,1000px,auto;
     overflow-x: hidden;
     width: 100%;
     height: 100%;
@@ -152,17 +148,6 @@
     }
   }
 
-  .pesquisa{
-    margin-top: 10px;
-    position: relative;
-        left: 26%;
-        height: 64px;
-        width: 852px;
-        background-color: #C2B7B4;
-        border: none;
-        font-size: xx-large;
-        font: 40px inter;
-  }
 
   [type="search"]::-webkit-search-cancel-button {
     -webkit-appearance: none;

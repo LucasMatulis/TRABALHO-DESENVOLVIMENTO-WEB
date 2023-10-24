@@ -17,36 +17,36 @@ function Cadastro(){
 
 
     return(
-        <section>
-    <header class="cabecalho">
-        <Link class="sair"  to="/">SAIR</Link>
-        <Link class="menu" to="/adm">MENU PRINCIPAL</Link>
-        <Link class="produto" to="/edicao">EDIÇÃO DE PRODUTO</Link>
+        <section className="tela">
+            <header className="cabecalho">
+                <Link className="sair"  to="/">SAIR</Link>
+                <Link className="menu" to="/adm">MENU PRINCIPAL</Link>
+                <Link className="produto" to="/edicao">EDIÇÃO DE PRODUTO</Link>
 
-        <div class="logo">
-            <img src={Logo} class="controle"/>
-            <strong>RETRO GAMES</strong>
-        </div>
-    </header>
+                <div className="logo">
+                    <img src={Logo} className="controle"/>
+                    <strong>RETRO GAMES</strong>
+                </div>
+            </header>
 
-    <div>
-        <h1 class="titulo">CADASTRO DE PRODUTOS</h1>
+            <div>
+                <h1 className="titulo">CADASTRO DE PRODUTOS</h1>
 
-        <div class="cadastro">
-            <div class="imagem">
-            {selectedImage &&<img src={selectedImage} class="stock"/>}
-                        <input type="file"  accept="image/*" class="link" onChange={handleImageSelect}/>                    
+                <div className="cadastro">
+                    <div className="imagem">
+                    {selectedImage &&<img src={selectedImage} className="stock"/>}
+                                <input type="file"  accept="image/*" className="link" onChange={handleImageSelect}/>                    
+                    </div>
+                    <div className="inputs">
+                        <label for="">Inserir Nome:</label>
+                        <input type="text" className="Nome" placeholder="Nome"/>
+                        <label for="">Inserir Preço:</label>
+                        <input type="text" className="Nome" placeholder="R$ 0.00"/>
+                        <input className="adicionar" type="button" value="Adicionar"/>
+                    </div>
+                </div>
             </div>
-            <div class="inputs">
-                <label for="">Inserir Nome:</label>
-                <input type="text" class="Nome" placeholder="Nome"/>
-                <label for="">Inserir Preço:</label>
-                <input type="text" class="Nome" placeholder="R$ 0.00"/>
-                <input class="adicionar" type="button" value="Adicionar"/>
-            </div>
-        </div>
-    </div>
-        
+                
         </section>
     );
 

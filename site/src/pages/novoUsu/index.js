@@ -4,7 +4,7 @@ import Logo from "./logo.png"
 import Seta from "./Seta.png"
 
 
-function Login(){
+function NovoUsu(){
 
     
     
@@ -16,7 +16,7 @@ function Login(){
                 </header>
 
                 <div className="Bloco1">
-                    <h1 className="Login">LOGIN</h1>
+                    <h1 className="NovoUsuario">NOVO USUARIO</h1>
                     <div className="InsiraNome">
                         <img className="seta1" src={Seta}/>
                         <label>Insira seu nome<input type="text" placeholder="Nome"/></label>
@@ -25,11 +25,10 @@ function Login(){
                         <img className="seta2" src={Seta} />
                         <label>Insira sua Senha<input type="password" placeholder="Senha"/></label>
                     </div>
-                    <Link to="/adm" className="entrar">ENTRAR</Link>
-                    <Link to="/novoUsu" className="cadastrar">CADASTRAR</Link>
+                    <Link to="/adm" className="entrar">CADASTRAR</Link>
                 </div>
         </section>
     );
 }
 
-export default Login;
+export default NovoUsu;

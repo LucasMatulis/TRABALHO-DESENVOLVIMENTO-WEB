@@ -6,18 +6,18 @@ import Logo from "./logo.png"
 function Adm(){
     return(
         <section>
-                    <header class="logo">
-                        <img src={Logo} class="controle"/>
+                    <header className="logo">
+                        <img src={Logo} className="controle"/>
                         <strong>RETRO GAMES</strong>
                     </header>
 
-                <div class="mundo">
+                <div className="mundo">
 
-                    <h1 class="titulo"> BEM VINDO - PEDRO AUGUSTO </h1>
+                    <h1 className="titulo"> BEM VINDO - PEDRO AUGUSTO </h1>
 
-                    <Link class="editar" to="/cadastro">ADICIONAR ALGUM PRODUTO</Link>
-                    <Link class="adicionar" to="/edicao">EDITAR ALGUM PRODUTO</Link>
-                    <Link class="voltar" to="/">SAIR</Link>
+                    <Link className="editar" to="/cadastro">ADICIONAR ALGUM PRODUTO</Link>
+                    <Link className="adicionar" to="/edicao">EDITAR ALGUM PRODUTO</Link>
+                    <Link className="voltar" to="/">SAIR</Link>
 
                 </div>
         </section>
