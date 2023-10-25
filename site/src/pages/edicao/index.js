@@ -15,12 +15,14 @@ function Edicao(){
             console.log(selectedImage);
         };
 
+    const nome="Mario Kart";
+    const preco=99.9
+
 
     return(
         <section>
              <header className="cabecalho">
              <Link className="sair"  to="/">SAIR</Link>
-            <Link className="menu" to="/adm">MENU PRINCIPAL</Link>
             <Link className="produto" to="/cadastro">CADASTRO DE PRODUTO</Link>
 
         <div className="logo">
@@ -39,9 +41,9 @@ function Edicao(){
                     </div>
                     <div className="inputs">
                         <label for="">Inserir Nome:</label>
-                        <input type="text" className="Nome" placeholder="Nome"/>
+                        <input type="text" className="Nome" placeholder={nome}/>
                         <label for="">Inserir Preço:</label>
-                        <input type="text" className="Nome" placeholder="R$0.00"/>
+                        <input type="text" className="Nome" placeholder={preco}/>
                         <div>
                             <input className="botao" type="button" value="Editar"/>
                             <input className="botao" type="button" value="Deletar"/>

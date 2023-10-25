@@ -20,7 +20,6 @@ function Cadastro(){
         <section className="tela">
             <header className="cabecalho">
                 <Link className="sair"  to="/">SAIR</Link>
-                <Link className="menu" to="/adm">MENU PRINCIPAL</Link>
                 <Link className="produto" to="/edicao">EDIÇÃO DE PRODUTO</Link>
 
                 <div className="logo">

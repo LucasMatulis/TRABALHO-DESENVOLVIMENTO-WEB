@@ -2,9 +2,23 @@ import { Link } from 'react-router-dom';
 import './index.scss';
 import Logo from "./logo.png"
 import Seta from "./Seta.png"
+import { useState } from 'react';
 
 
 function Login(){
+
+    const [nome, setNome]= useState("")
+
+    const handleNomeChange = (event) => {
+      setNome(event.target.value);
+    };
+
+    const handleEntrarClick = () => {
+        if (!nome) {
+          alert('Por favor, insira seu nome.');
+        } 
+      };
+  
 
     
     
@@ -19,13 +33,13 @@ function Login(){
                     <h1 className="Login">LOGIN</h1>
                     <div className="InsiraNome">
                         <img className="seta1" src={Seta}/>
-                        <label>Insira seu nome<input type="text" placeholder="Nome"/></label>
+                        <label>Insira seu nome<input type="text" placeholder="Nome" id='Nome' value={nome} onChange={handleNomeChange}/></label>
                     </div>
                     <div className="InsiraSenha">
                         <img className="seta2" src={Seta} />
                         <label>Insira sua Senha<input type="password" placeholder="Senha"/></label>
                     </div>
-                    <Link to="/adm" className="entrar">ENTRAR</Link>
+                    <Link to={nome ? `/adm/${nome}` : '/login'} className="entrar" onClick={handleEntrarClick}>ENTRAR</Link>
                     <Link to="/novoUsu" className="cadastrar">CADASTRAR</Link>
                 </div>
         </section>

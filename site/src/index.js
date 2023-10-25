@@ -19,7 +19,7 @@ root.render(
       <Routes>
         <Route path='/' element={<App />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/adm' element={<Adm />} />
+        <Route path='/adm/:nome' element={<Adm />} />
         <Route path='/cadastro' element={<Cadastro />} />
         <Route path='/edicao' element={<Edicao />} />
         <Route path='/novoUsu' element={<NovoUsu />} />
