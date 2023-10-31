@@ -6,17 +6,19 @@ import { useState, useEffect } from 'react';
 function Login(){
 
     const [nome, setNome]= useState("")
+    const [senha, setSenha]=useState("")
+    const [listaUsuarios, setListaUsuarios] = useState([]);
 
-    const handleNomeChange = (event) => {
-      setNome(event.target.value);
-    };
 
-    const handleEntrarClick = () => {
-        if (!nome) {
-          alert('Por favor, insira seu nome.');
-        } 
-      };
-  
+
+
+      async function buscarUsuario() {
+        let r = await axios.get('http://localhost:5000/adm');
+        let usuarios = r.data;
+    
+        setListaUsuarios(usuarios);
+
+    }
 
     
     
@@ -31,11 +33,11 @@ function Login(){
                     <h1 className="Login">LOGIN</h1>
                     <div className="InsiraNome">
                         <img className="seta1" src="/assets/images/Seta.png"/>
-                        <label>Insira seu nome<input type="text" placeholder="Nome" id='Nome' value={nome} onChange={handleNomeChange}/></label>
+                        <label>Insira seu nome<input type="text" value={nome} placeholder="Nome" onChange={(e)=>setNome(e.target.value)}/></label>
                     </div>
                     <div className="InsiraSenha">
                         <img className="seta2" src="/assets/images/Seta.png" />
-                        <label>Insira sua Senha<input type="password" placeholder="Senha"/></label>
+                        <label>Insira sua Senha<input type="password" value={senha} placeholder="Senha" onChange={(e)=> setSenha(e.target.value)}/></label>
                     </div>
                     <Link to={nome ? `/adm/${nome}` : '/login'} className="entrar" onClick={handleEntrarClick}>ENTRAR</Link>
                     <Link to="/novoUsu" className="cadastrar">CADASTRAR</Link>
