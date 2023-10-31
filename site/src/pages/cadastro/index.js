@@ -1,14 +1,12 @@
 import { Link } from 'react-router-dom';
 import './index.scss';
-import Logo from "./logo.png"
-import Branco from "./branco.png"
 import { useState } from 'react';
 
 
 
 function Cadastro(){
 
-    const [selectedImage, setSelectedImage] = useState(Branco);
+    const [selectedImage, setSelectedImage] = useState("/assets/images/branco.png");
 
         const handleImageSelect = (e) => {
             const file = e.target.files[0];
@@ -23,7 +21,7 @@ function Cadastro(){
                 <Link className="produto" to="/edicao">EDIÇÃO DE PRODUTO</Link>
 
                 <div className="logo">
-                    <img src={Logo} className="controle"/>
+                    <img src='/assets/images/logo.png' className="controle"/>
                     <strong>RETRO GAMES</strong>
                 </div>
             </header>

@@ -1,6 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
 import './index.scss';
-import Logo from "./logo.png"
 import React from 'react';
 
 
@@ -13,7 +12,7 @@ function Adm(){
     return(
         <section>
                     <header className="logo">
-                        <img src={Logo} className="controle"/>
+                        <img src="/assets/images/logo.png" className="controle"/>
                         <strong>RETRO GAMES</strong>
                     </header>
 

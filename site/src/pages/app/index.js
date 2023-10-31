@@ -1,13 +1,12 @@
 import { Link } from 'react-router-dom';
 import './index.scss';
-import logo from "./logo.png"
 
 function App() {
   return (
     <section>
       <header>
         <div className="logo">
-            <img src={logo} className="controle"/>
+            <img src="/assets/images/logo.png" className="controle"/>
             <strong>RETRO GAMES</strong>
         </div>
         <input className="pesquisa" type="search" placeholder="DIGITE O NOME DO JOGO"/>

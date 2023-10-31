@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
 import './index.scss';
-import Logo from "./logo.png"
-import Seta from "./Seta.png"
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 function Login(){
@@ -25,18 +23,18 @@ function Login(){
     return(
         <section className='Entrada'>
                 <header className="logo">
-                    <img src={Logo} className="controle"/>
+                    <img src="/assets/images/logo.png" className="controle"/>
                     <strong>RETRO GAMES</strong>
                 </header>
 
                 <div className="Bloco1">
                     <h1 className="Login">LOGIN</h1>
                     <div className="InsiraNome">
-                        <img className="seta1" src={Seta}/>
+                        <img className="seta1" src="/assets/images/Seta.png"/>
                         <label>Insira seu nome<input type="text" placeholder="Nome" id='Nome' value={nome} onChange={handleNomeChange}/></label>
                     </div>
                     <div className="InsiraSenha">
-                        <img className="seta2" src={Seta} />
+                        <img className="seta2" src="/assets/images/Seta.png" />
                         <label>Insira sua Senha<input type="password" placeholder="Senha"/></label>
                     </div>
                     <Link to={nome ? `/adm/${nome}` : '/login'} className="entrar" onClick={handleEntrarClick}>ENTRAR</Link>
