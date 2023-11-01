@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import './index.scss';
 import { useState, useEffect } from 'react';
+import axios from 'axios';
+
 
 
 function Login(){
@@ -18,6 +20,35 @@ function Login(){
     
         setListaUsuarios(usuarios);
 
+    }
+
+    useEffect(() => {
+    
+    buscarUsuario();
+
+    }, [])
+
+
+
+    function verificarUsuario(){
+
+        if(!nome || !senha){
+            alert("Nome ou senha vazios.")
+        }
+        else{
+
+
+        listaUsuarios.forEach(usuario => {
+
+            if(usuario.nome==nome && usuario.senha==senha)
+                 window.location.href = `/adm/${nome}`;
+            else{
+                alert('Nome ou Senha errados ou não existem');
+                window.location.href='/login'
+            }
+        });
+
+    }
     }
 
     
@@ -39,7 +70,7 @@ function Login(){
                         <img className="seta2" src="/assets/images/Seta.png" />
                         <label>Insira sua Senha<input type="password" value={senha} placeholder="Senha" onChange={(e)=> setSenha(e.target.value)}/></label>
                     </div>
-                    <Link to={nome ? `/adm/${nome}` : '/login'} className="entrar" onClick={handleEntrarClick}>ENTRAR</Link>
+                    <button to={nome ? `/adm/${nome}` : '/login'} className="entrar" onClick={verificarUsuario}>ENTRAR</button>
                     <Link to="/novoUsu" className="cadastrar">CADASTRAR</Link>
                 </div>
         </section>
