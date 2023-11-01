@@ -1,20 +1,52 @@
 import { Link } from 'react-router-dom';
 import './index.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+
 
 
 function Edicao(){
 
-    const [selectedImage, setSelectedImage] = useState("/assets/images/branco.png");
+    const [listaJogos, setListaJogos] = useState([]);
+    const [imagem, setImagem] = useState({});
 
-        const handleImageSelect = (e) => {
-            const file = e.target.files[0];
-            setSelectedImage(URL.createObjectURL(file));
-            console.log(selectedImage);
+
+        async function buscarJogo() {
+            let r = await axios.get('http://localhost:5000/jogo');
+            let jogos = r.data;
+        
+            setListaJogos(jogos);
+            console.log(jogos)
+
+    
+        }
+    
+        useEffect(() => {
+        
+            buscarJogo();
+        
+        }, [])
+
+       useEffect(() => {
+        // Converter blobs de imagem em URLs de dados
+        const carregarImagens = async () => {
+            const jogosComImagens = await Promise.all(
+                listaJogos.map(async (item) => {
+                    try {
+                        const imageUrl = await blobToDataURL(item.imagem);
+                        return { ...item, imageUrl };
+                    } catch (error) {
+                        console.error('Erro ao converter Blob em URL de dados:', error);
+                        return item;
+                    }
+                })
+            );
+
+            setListaJogos(jogosComImagens);
         };
 
-    const nome="Mario Kart";
-    const preco=99.9
+        carregarImagens();
+    }, [listaJogos]);
 
 
     return(
@@ -32,22 +64,23 @@ function Edicao(){
     <div>
         <ul>
             <li>
-                <div className="cadastro">
+                {listaJogos.map(item=>
+                <div className="cadastro" key={item.id}>
                     <div className="imagem">
-                        {selectedImage &&<img src={selectedImage} className="stock"/>}
-                        <input type="file"  accept="image/*" className="link" onChange={handleImageSelect}/>                    
+                        <img src={item.imageUrl} className="stock"/>
+                        <input type="file"  accept="image/*" className="link"/>                    
                     </div>
                     <div className="inputs">
                         <label for="">Inserir Nome:</label>
-                        <input type="text" className="Nome" placeholder={nome}/>
+                        <input type="text" className="Nome" placeholder={item.nome} />
                         <label for="">Inserir Preço:</label>
-                        <input type="text" className="Nome" placeholder={preco}/>
+                        <input type="text" className="Nome" placeholder={item.preco} />
                         <div>
                             <input className="botao" type="button" value="Editar"/>
                             <input className="botao" type="button" value="Deletar"/>
                         </div>
                     </div>
-                </div>
+                </div>)}
             </li>
         </ul>
 
