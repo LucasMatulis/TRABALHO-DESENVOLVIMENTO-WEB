@@ -42,10 +42,6 @@ function Login(){
 
             if(usuario.nome==nome && usuario.senha==senha)
                  window.location.href = `/adm/${nome}`;
-            else{
-                alert('Nome ou Senha errados ou não existem');
-                window.location.href='/login'
-            }
         });
 
     }

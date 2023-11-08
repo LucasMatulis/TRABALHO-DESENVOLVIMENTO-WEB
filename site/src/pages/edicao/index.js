@@ -27,27 +27,6 @@ function Edicao(){
         
         }, [])
 
-       useEffect(() => {
-        // Converter blobs de imagem em URLs de dados
-        const carregarImagens = async () => {
-            const jogosComImagens = await Promise.all(
-                listaJogos.map(async (item) => {
-                    try {
-                        const imageUrl = await blobToDataURL(item.imagem);
-                        return { ...item, imageUrl };
-                    } catch (error) {
-                        console.error('Erro ao converter Blob em URL de dados:', error);
-                        return item;
-                    }
-                })
-            );
-
-            setListaJogos(jogosComImagens);
-        };
-
-        carregarImagens();
-    }, [listaJogos]);
-
 
     return(
         <section>
