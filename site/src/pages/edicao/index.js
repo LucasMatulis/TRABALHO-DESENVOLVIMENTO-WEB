@@ -102,7 +102,7 @@ function Edicao(){
                 {listaJogos.map(item=>
                 <div className="cadastro" key={item.id}>
                     <div className="imagem">
-                    {selectedImage &&<img src={selectedImage} className="stock"/>}
+                    {item.image &&<img src={item.image} className="stock"/>}
                                 <input type="file"  accept="image/*" className="link" onChange={handleImageSelect}/>                                    
                     </div>
                     <div className="inputs">
