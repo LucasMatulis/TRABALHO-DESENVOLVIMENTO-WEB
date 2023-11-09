@@ -46,7 +46,7 @@ function Edicao(){
                 {listaJogos.map(item=>
                 <div className="cadastro" key={item.id}>
                     <div className="imagem">
-                        <img src={item.imageUrl} className="stock"/>
+                        <img src={item.image} className="stock"/>
                         <input type="file"  accept="image/*" className="link"/>                    
                     </div>
                     <div className="inputs">
