@@ -104,6 +104,8 @@ function Edicao(){
                     <div className="imagem">
                     {selectedImage &&<img src={selectedImage} className="stock"/>}
                                 <input type="file"  accept="image/*" className="link" onChange={handleImageSelect}/>                   
+                        <img src={item.image} className="stock"/>
+                        <input type="file"  accept="image/*" className="link"/>                    
                     </div>
                     <div className="inputs">
                         <label for="">Inserir Nome:</label>
