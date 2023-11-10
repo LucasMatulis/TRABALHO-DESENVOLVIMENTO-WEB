@@ -13,6 +13,7 @@ export async function salvar(jogo) {
   return jogo;
 }
 
+
 export async function listar() {
   const comando = `
      SELECT idJogo        as id,
@@ -46,13 +47,24 @@ export async function alterar(id, jogo) {
   const comando=`  UPDATE retrogames.jogos
                     SET
                     nomeJogo = ?,
-                    precoJogo = ?,
+                    precoJogo = ?
+                    WHERE idJogo = ?`
+
+  const [linhas] = await con.query(comando, [jogo.nomeJogo, jogo.precoJogo, id])
+  
+  return linhas.affectedRows;
+
+}
+
+export async function alterarCapa(id, caminho) {
+  const comando=`  UPDATE retrogames.jogos
+                    SET
                     imagemJogo = ?
                     WHERE idJogo = ?`
 
-  const [linhas] = await con.query(comando, [jogo.nomeJogo, jogo.precoJogo,jogo.imagemJogo, id])
+  const [linhas] = await con.query(comando, [caminho,id])
   
-  return jogo;
+  return linhas.affectedRows;
 
 }
 

@@ -12,6 +12,7 @@ servidor.use(express.json());
 
 servidor.use(jogoController); 
 servidor.use(admController);
+servidor.use('/storage', express.static('./storage'))
 
 
 

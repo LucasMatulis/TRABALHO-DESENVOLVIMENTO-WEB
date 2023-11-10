@@ -1,10 +1,14 @@
-import { buscarPorId, listar, remover, salvar, alterar } from "../repository/jogoRepository.js";
+import { buscarPorId, listar, remover, salvar, alterar, alterarCapa} from "../repository/jogoRepository.js";
 
 import { Router } from "express";
+import multer from "multer";
+
 const endpoints = Router();
 
+const upload=multer({dest: './storage'})
 
-endpoints.post('/jogo', async (req, resp) => {
+
+endpoints.post('/jogo',upload.single('capa') ,async (req, resp) => {
   try {
     let jogo = req.body;
 
@@ -17,7 +21,8 @@ endpoints.post('/jogo', async (req, resp) => {
     // outras validações
 
     let r = await salvar(jogo);
-
+    resp.send(r);
+    r= await salvarCapa(jogo)
     resp.send(r);
   }
   catch (err) {
@@ -41,8 +46,7 @@ endpoints.put('/jogo/:id', async (req, resp) => {
     // outras validações
 
     let r = await alterar(id,jogo);
-
-    resp.send(r);
+    resp.sendStatus(202);
   }
   catch (err) {
     resp.status(400).send({
@@ -50,6 +54,20 @@ endpoints.put('/jogo/:id', async (req, resp) => {
     })
   }
 });
+
+endpoints.put('/jogo/:id/capa',upload.single('capa'), async (req, resp)=>{
+  try {
+    let id = req.params.id;
+    let caminho = req.file.path;
+
+    let r = await alterarCapa(id, caminho);
+    resp.status(202).send();
+  } catch (err) {
+    resp.status(400).send({
+      erro: err.message
+    });
+  }
+})
 
 
 endpoints.get('/jogo', async (req, resp) => {

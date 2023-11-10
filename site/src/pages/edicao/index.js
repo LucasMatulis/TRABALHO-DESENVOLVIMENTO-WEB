@@ -10,13 +10,9 @@ function Edicao(){
     const [listaJogos, setListaJogos] = useState([]); 
     const [nomeJogo, setNomeJogo]=useState("");
     const [precoJogo, setPrecoJogo]=useState("")
-    const [selectedImage, setSelectedImage] = useState("/assets/images/branco.png");
+    const [arquivo, setArquivo]=useState();
 
 
-        const handleImageSelect = (e) => {
-            const file = e.target.files[0];
-            setSelectedImage(URL.createObjectURL(file));
-        };
 
         async function buscarJogo() {
             let r = await axios.get('http://localhost:5000/jogo');
@@ -30,20 +26,25 @@ function Edicao(){
 
         async function atualizarJogo(item) {
 
-            if(!nomeJogo & !precoJogo & !selectedImage){
+            if(!nomeJogo & !precoJogo & !arquivo){
                 alert("Nenhuma alteração feita")
             }
+
+            const formData= new FormData();
+            formData.append('capa',arquivo)
 
             let jogoAtualizado = {
               id: item.id,
               nomeJogo: nomeJogo, 
-              precoJogo: Number(precoJogo),
-              imagemJogo:selectedImage
-            
+              precoJogo: Number(precoJogo)   
             };
           
             try {
-              let response = await axios.put(`http://localhost:5000/jogo/${jogoAtualizado.id}`, jogoAtualizado);
+              let r = await axios.put(`http://localhost:5000/jogo/${jogoAtualizado.id}`, jogoAtualizado);
+              r= await axios.put(`http://localhost:5000/jogo/${jogoAtualizado.id}/capa`, formData,{
+                headers:{'Content-Type': 'multipart/form-data'}
+              })  
+              
               alert("Jogo Alterado. Id: " + item.id);
               window.location.reload(false)
             } catch (error) {
@@ -102,8 +103,8 @@ function Edicao(){
                 {listaJogos.map(item=>
                 <div className="cadastro" key={item.id}>
                     <div className="imagem">
-                    {item.image &&<img src={item.image} className="stock"/>}
-                                <input type="file"  accept="image/*" className="link" onChange={handleImageSelect}/>                                    
+                        <img src={`http://localhost:5000/${item.imagem}`} className="stock"/>
+                        <input type="file"  accept="image/*" className="link" onChange={(e)=>setArquivo(e.target.files[0])}/>                                    
                     </div>
                     <div className="inputs">
                         <label for="">Inserir Nome:</label>
