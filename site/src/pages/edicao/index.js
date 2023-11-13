@@ -25,7 +25,6 @@ function Edicao(){
         }
 
         async function atualizarJogo(item) {
-            // Verificar se pelo menos uma informação foi alterada
             if (!nomeJogo && !precoJogo && !arquivo) {
                 alert("Nenhuma alteração feita");
                 return;
@@ -36,14 +35,13 @@ function Edicao(){
 
             let jogoAtualizado = {
                 id: item.id,
-                nomeJogo: nomeJogo || item.nome, // Usar o valor existente se não for fornecido um novo
-                precoJogo: precoJogo !== "" ? Number(precoJogo) : item.preco, // Usar o valor existente se não for fornecido um novo
+                nomeJogo: nomeJogo || item.nome,
+                precoJogo: precoJogo !== "" ? Number(precoJogo) : item.preco,
             };
 
             try {
                 let r = await axios.put(`http://localhost:5000/jogo/${jogoAtualizado.id}`, jogoAtualizado);
 
-                // Atualizar apenas se um novo arquivo for fornecido
                 if (arquivo) {
                 r = await axios.put(`http://localhost:5000/jogo/${jogoAtualizado.id}/capa`, formData, {
                     headers: { 'Content-Type': 'multipart/form-data' },

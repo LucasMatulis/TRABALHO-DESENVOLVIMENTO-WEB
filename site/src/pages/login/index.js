@@ -38,15 +38,14 @@ function Login(){
         }
         else{
 
-           
-
-        listaUsuarios.forEach(usuario => {
-
-            if(usuario.nome==nome && usuario.senha==senha)
-                 window.location.href = `/adm/${nome}`;
-        });
-
-    }
+            const nomeExistente = listaUsuarios.some(usuario => usuario.nome === nome && usuario.senha === senha);
+  
+            if (nomeExistente) {
+                window.location.href = `/adm/${nome}`;
+            } else {
+                alert("Nome ou senha incorretos")
+            }
+        }
     }
 
     

@@ -11,7 +11,7 @@ function Cadastro(){
 
     const [nomeJogo, setNomeJogo]=useState("");
     const [precoJogo, setPrecoJogo]=useState("")
-    const [selectedImage, setSelectedImage] = useState("/assets/images/branco.png");
+    const [selectedImage, setSelectedImage] = useState(`http://localhost:5000/storage/branco.png`);
 
         const handleImageSelect = (e) => {
             const file = e.target.files[0];
