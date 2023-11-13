@@ -25,33 +25,39 @@ function Edicao(){
         }
 
         async function atualizarJogo(item) {
-
-            if(!nomeJogo & !precoJogo & !arquivo){
-                alert("Nenhuma alteração feita")
+            // Verificar se pelo menos uma informação foi alterada
+            if (!nomeJogo && !precoJogo && !arquivo) {
+                alert("Nenhuma alteração feita");
+                return;
             }
 
-            const formData= new FormData();
-            formData.append('capa',arquivo)
+            const formData = new FormData();
+            formData.append('capa', arquivo);
 
             let jogoAtualizado = {
-              id: item.id,
-              nomeJogo: nomeJogo, 
-              precoJogo: Number(precoJogo)   
+                id: item.id,
+                nomeJogo: nomeJogo || item.nome, // Usar o valor existente se não for fornecido um novo
+                precoJogo: precoJogo !== "" ? Number(precoJogo) : item.preco, // Usar o valor existente se não for fornecido um novo
             };
-          
+
             try {
-              let r = await axios.put(`http://localhost:5000/jogo/${jogoAtualizado.id}`, jogoAtualizado);
-              r= await axios.put(`http://localhost:5000/jogo/${jogoAtualizado.id}/capa`, formData,{
-                headers:{'Content-Type': 'multipart/form-data'}
-              })  
-              
-              alert("Jogo Alterado. Id: " + item.id);
-              window.location.reload(false)
+                let r = await axios.put(`http://localhost:5000/jogo/${jogoAtualizado.id}`, jogoAtualizado);
+
+                // Atualizar apenas se um novo arquivo for fornecido
+                if (arquivo) {
+                r = await axios.put(`http://localhost:5000/jogo/${jogoAtualizado.id}/capa`, formData, {
+                    headers: { 'Content-Type': 'multipart/form-data' },
+                });
+                }
+
+                alert("Jogo Alterado. Id: " + item.id);
+                window.location.reload(false);
             } catch (error) {
-              console.error("Erro ao atualizar jogo:", error);
-              console.log(`http://localhost:5000/jogo/${jogoAtualizado.id}`)
+                console.error("Erro ao atualizar jogo:", error);
+                console.log(`http://localhost:5000/jogo/${jogoAtualizado.id}`);
             }
-          }
+        }
+
 
           async function deletarJogo(id){
 

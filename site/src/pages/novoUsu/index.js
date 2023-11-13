@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import './index.scss';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import axios from 'axios';
 
 
@@ -9,29 +9,50 @@ function NovoUsu(){
 
     const [nome, setNome]= useState("")
     const [senha, setSenha]=useState("")
+    const [listaUsuarios, setListaUsuarios] = useState([]);
 
 
 
-      async function salvarUsuario() {
 
-        if (!nome || !senha) {
+    async function salvarUsuario() {
+      if (!nome || !senha) {
           alert('Por favor, insira seu nome ou senha.');
-        } else {
-
-            let body={
-              nome:nome,
-              senha:senha
-            }
-
-            let r= await axios.post('http://localhost:5000/adm', body)
-            let id= r.data.id
-
-            alert("Usuario cadastrado. Id: "+id)
-
-            window.location.href = `/login`;
-        }
-
+      } else {
+          const nomeExistente = listaUsuarios.some(usuario => usuario.nome === nome);
+  
+          if (nomeExistente) {
+              alert('Nome de usuário já está em uso. Por favor, escolha outro nome.');
+          } else {
+              let body = {
+                  nome: nome,
+                  senha: senha
+              }
+  
+              let r = await axios.post('http://localhost:5000/adm', body);
+              let id = r.data.id;
+  
+              alert("Usuário cadastrado. Id: " + id);
+  
+              window.location.href = `/login`;
+          }
       }
+  }  
+
+      async function buscarUsuario() {
+        let r = await axios.get('http://localhost:5000/adm');
+        let usuarios = r.data;
+    
+        setListaUsuarios(usuarios);
+
+    }
+
+        useEffect(() => {
+        
+        buscarUsuario();
+        console.log(listaUsuarios)
+
+        }, [])
+
 
     
     return(

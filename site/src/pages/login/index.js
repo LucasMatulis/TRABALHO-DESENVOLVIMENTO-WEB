@@ -25,6 +25,7 @@ function Login(){
     useEffect(() => {
     
     buscarUsuario();
+    console.log(listaUsuarios)
 
     }, [])
 
@@ -37,6 +38,7 @@ function Login(){
         }
         else{
 
+           
 
         listaUsuarios.forEach(usuario => {
 
