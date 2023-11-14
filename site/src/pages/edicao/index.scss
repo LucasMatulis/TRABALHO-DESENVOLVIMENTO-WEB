@@ -150,6 +150,19 @@
     }
   }
 
+  .pesquisaEdit{
+    margin-top: 10px;
+    position: relative;
+    left: 27%;
+    height: 64px;
+    width: 852px;
+    background-color: #C2B7B4;
+    border: none;
+    font-size: xx-large;
+    font: 40px inter;
+    border-radius: 25px;
+}
+
 
   [type="search"]::-webkit-search-cancel-button {
     -webkit-appearance: none;

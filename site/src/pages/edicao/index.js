@@ -11,6 +11,8 @@ function Edicao(){
     const [nomeJogo, setNomeJogo]=useState("");
     const [precoJogo, setPrecoJogo]=useState("")
     const [arquivo, setArquivo]=useState();
+    const [termoPesquisa, setTermoPesquisa] = useState('');
+
 
 
 
@@ -88,45 +90,86 @@ function Edicao(){
         
         }, [])
 
+        const handlePesquisa = (event) => {
+            setTermoPesquisa(event.target.value);
+          };
+        
+          const jogosFiltrados = listaJogos.filter((item) =>
+            item.nome.toLowerCase().includes(termoPesquisa.toLowerCase())
+          );
 
-    return(
-        <section>
-             <header className="cabecalho">
-             <Link className="sair"  to="/">SAIR</Link>
-            <Link className="produto" to="/cadastro">CADASTRO DE PRODUTO</Link>
 
-        <div className="logo">
-            <img src="/assets/images/logo.png" className="controle"/>
-            <strong>RETRO GAMES</strong>
-        </div>
-    </header>
-
-    <div>
-        <ul>
-            <li>
-                {listaJogos.map(item=>
-                <div className="cadastro" key={item.id}>
-                    <div className="imagem">
-                        <img src={`http://localhost:5000/${item.imagem}`} className="stock"/>
-                        <input type="file"  accept="image/*" className="link" onChange={(e)=>setArquivo(e.target.files[0])}/>                                    
-                    </div>
-                    <div className="inputs">
-                        <label for="">Inserir Nome:</label>
-                        <input type="text" className="Nome" placeholder={item.nome} onChange={(e)=>setNomeJogo(e.target.value)} />
-                        <label for="">Inserir Preço:</label>
-                        <input type="text" className="Nome" placeholder={item.preco} onChange={(e)=>setPrecoJogo(e.target.value)} />
-                        <div>
-                            <button className="botao" type="button" onClick={() =>atualizarJogo(item)} >EDITAR</button>
-                            <button className="botao" type="button" onClick={() =>deletarJogo(item.id)} >DELETAR</button>
+        return (
+            <section>
+              <header className="cabecalho">
+                <Link className="sair" to="/">
+                  SAIR
+                </Link>
+                <Link className="produto" to="/cadastro">
+                  CADASTRO DE PRODUTO
+                </Link>
+        
+                <div className="logo">
+                  <img src="/assets/images/logo.png" className="controle" alt="Logo" />
+                  <strong>RETRO GAMES</strong>
+                </div>
+              </header>
+        
+              <div>
+                <input
+                  className="pesquisaEdit"
+                  type="search"
+                  placeholder="Pesquisar por nome do jogo"
+                  value={termoPesquisa}
+                  onChange={handlePesquisa}
+                />
+                <ul>
+                  {jogosFiltrados.map((item) => (
+                    <li key={item.id}>
+                      <div className="cadastro">
+                        <div className="imagem">
+                          <img
+                            src={`http://localhost:5000/${item.imagem}`}
+                            className="stock"
+                            alt="Imagem do Jogo"
+                          />
+                          <input
+                            type="file"
+                            accept="image/*"
+                            className="link"
+                            onChange={(e) => setArquivo(e.target.files[0])}
+                          />
                         </div>
-                    </div>
-                </div>)}
-            </li>
-        </ul>
-
-    </div>
-        </section>
-    );
-}
-
-export default Edicao
+                        <div className="inputs">
+                          <label htmlFor="">Inserir Nome:</label>
+                          <input
+                            type="text"
+                            className="Nome"
+                            placeholder={item.nome}
+                            onChange={(e) => setNomeJogo(e.target.value)}
+                          />
+                          <label htmlFor="">Inserir Preço:</label>
+                          <input
+                            type="text"
+                            className="Nome"
+                            placeholder={item.preco}
+                            onChange={(e) => setPrecoJogo(e.target.value)}
+                          />
+                          <div>
+                            <button
+                              className="botao"
+                              type="button"
+                              onClick={() => atualizarJogo(item)}> EDITAR</button>
+                            <button className="botao" type="button" onClick={() => deletarJogo(item.id)}>DELETAR</button>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </section>
+          );
+        }
+        
+        export default Edicao;
