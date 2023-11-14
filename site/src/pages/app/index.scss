@@ -68,10 +68,11 @@ ul{
 }
 
 li{
-  list-style-type: none 
+  list-style-type: none; 
 }
 
 .jogo{
+  margin-top: 30px;
   display: flex;
   flex-direction: row;
   height: 206.8px;
@@ -80,7 +81,6 @@ li{
   position: relative;
   left: 15%;
   border-radius: 25px;
-
       h1{
         font:85px inria
       }
@@ -94,8 +94,9 @@ li{
 
       .preco{
         position: relative;
+        left: 0%;
         color: white;
-        width: 328px;
+        width: 380px;
       }
 
       .stock{

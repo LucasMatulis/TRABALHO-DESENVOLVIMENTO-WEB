@@ -1,37 +1,56 @@
 import { Link } from 'react-router-dom';
 import './index.scss';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function App() {
+  const [listaJogos, setListaJogos] = useState([]);
+  const [termoPesquisa, setTermoPesquisa] = useState('');
+
+  async function buscarJogo() {
+    let r = await axios.get('http://localhost:5000/jogo');
+    let jogos = r.data;
+    setListaJogos(jogos);
+  }
+
+  useEffect(() => {
+    buscarJogo();
+  }, []);
+
+  const handlePesquisa = (event) => {
+    setTermoPesquisa(event.target.value);
+  };
+
+  const jogosFiltrados = listaJogos.filter((item) =>
+    item.nome.toLowerCase().includes(termoPesquisa.toLowerCase())
+  );
+
   return (
     <section>
       <header>
         <div className="logo">
-            <img src="/assets/images/logo.png" className="controle"/>
-            <strong>RETRO GAMES</strong>
+          <img src="/assets/images/logo.png" className="controle" alt="Logo" />
+          <strong>RETRO GAMES</strong>
         </div>
-        <input className="pesquisa" type="search" placeholder="DIGITE O NOME DO JOGO"/>
-        <Link className="admin" to="/login">ADMIN</Link>
-    </header>
+        <input className="pesquisa" type="search" placeholder="DIGITE O NOME DO JOGO" value={termoPesquisa} onChange={handlePesquisa}/>
+        <Link className="admin" to="/login">
+          ADMIN
+        </Link>
+      </header>
 
-    <div>
+      <div>
         <ul>
-            <li>
-                <div className="jogo">
-                        <img src="https://i0.wp.com/snydercutbr.com/wp-content/uploads/2023/04/critica-super-maior-bros.png?fit=1920%2C1229&ssl=1" className="stock"/>
-                        <h1 className="nome">SUPER MARIO BROS</h1>
-                        <h1 className="preco">R$ 66,6</h1>
-                </div>
+          {jogosFiltrados.map((item) => (
+            <li key={item.id}>
+              <div className="jogo">
+                <img src={`http://localhost:5000/${item.imagem}`} className="stock" alt="Imagem do Jogo"/>
+                <h1 className="nome">{item.nome}</h1>
+                <h1 className="preco">R$ {item.preco}</h1>
+              </div>
             </li>
-            <li>
-                <div class="jogo">
-                        <img src="https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA10713_00/2/i_87fa16819f2fc611953a37a513ab33859014ccbb79116f0ed7a2097491d96ee4/i/icon0.png" className="stock"/>
-                        <h1 className="nome">MEGAMAN</h1>
-                        <h1 className="preco">R$ 66,6</h1>
-                </div>
-            </li>
+          ))}
         </ul>
-
-    </div>
+      </div>
     </section>
   );
 }
