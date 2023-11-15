@@ -15,7 +15,7 @@ function Login(){
 
 
       async function buscarUsuario() {
-        let r = await axios.get('http://191.234.200.182:5000/adm');
+        let r = await axios.get('http://20.197.242.211:5000/adm');
         let usuarios = r.data;
     
         setListaUsuarios(usuarios);

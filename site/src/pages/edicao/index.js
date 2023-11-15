@@ -17,7 +17,7 @@ function Edicao(){
 
 
         async function buscarJogo() {
-            let r = await axios.get('http://191.234.200.182:5000/jogo');
+            let r = await axios.get('http://20.197.242.211:5000/jogo');
             let jogos = r.data;
         
             setListaJogos(jogos);
@@ -42,10 +42,10 @@ function Edicao(){
             };
 
             try {
-                let r = await axios.put(`http://191.234.200.182:5000/jogo/${jogoAtualizado.id}`, jogoAtualizado);
+                let r = await axios.put(`http://20.197.242.211:5000/jogo/${jogoAtualizado.id}`, jogoAtualizado);
 
                 if (arquivo) {
-                r = await axios.put(`http://191.234.200.182:5000/jogo/${jogoAtualizado.id}/capa`, formData, {
+                r = await axios.put(`http://20.197.242.211:5000/jogo/${jogoAtualizado.id}/capa`, formData, {
                     headers: { 'Content-Type': 'multipart/form-data' },
                 });
                 }
@@ -54,7 +54,7 @@ function Edicao(){
                 window.location.reload(false);
             } catch (error) {
                 console.error("Erro ao atualizar jogo:", error);
-                console.log(`http://191.234.200.182:5000/jogo/${jogoAtualizado.id}`);
+                console.log(`http://20.197.242.211:5000/jogo/${jogoAtualizado.id}`);
             }
         }
 
@@ -67,12 +67,12 @@ function Edicao(){
                 const idInfo=id
 
                 try {
-                        let response = await axios.delete(`http://191.234.200.182:5000/jogo/${id}`);
+                        let response = await axios.delete(`http://20.197.242.211:5000/jogo/${id}`);
                         alert("Jogo Deletado. Id: " + idInfo);
                         window.location.reload(false)
                     } catch (error) {
                         console.error("Erro ao deletar jogo:", error);
-                        console.log(`http://191.234.200.182:5000/jogo/${id}`)
+                        console.log(`http://20.197.242.211:5000/jogo/${id}`)
                 }           
             }
                 else{
@@ -129,7 +129,7 @@ function Edicao(){
                       <div className="cadastro">
                         <div className="imagem">
                           <img
-                            src={`http://191.234.200.182:5000/${item.imagem}`}
+                            src={`http://20.197.242.211:5000/${item.imagem}`}
                             className="stock"
                             alt="Imagem do Jogo"
                           />
