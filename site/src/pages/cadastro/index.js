@@ -11,7 +11,7 @@ function Cadastro(){
 
     const [nomeJogo, setNomeJogo]=useState("");
     const [precoJogo, setPrecoJogo]=useState("")
-    const [selectedImage, setSelectedImage] = useState(`http://localhost:5000/storage/branco.png`);
+    const [selectedImage, setSelectedImage] = useState(`http://191.234.200.182:5000/storage/branco.png`);
 
         const handleImageSelect = (e) => {
             const file = e.target.files[0];
@@ -32,7 +32,7 @@ function Cadastro(){
                     imagemJogo:selectedImage
                 }
     
-                let r= await axios.post('http://localhost:5000/jogo', body)
+                let r= await axios.post('http://191.234.200.182:5000/jogo', body)
                 let id= r.data.id
     
                 alert("Jogo cadastrado. Id: "+id)

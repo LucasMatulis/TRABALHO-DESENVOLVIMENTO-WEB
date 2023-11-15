@@ -8,7 +8,7 @@ function App() {
   const [termoPesquisa, setTermoPesquisa] = useState('');
 
   async function buscarJogo() {
-    let r = await axios.get('http://localhost:5000/jogo');
+    let r = await axios.get('http://191.234.200.182:5000/jogo');
     let jogos = r.data;
     setListaJogos(jogos);
   }
@@ -43,7 +43,7 @@ function App() {
           {jogosFiltrados.map((item) => (
             <li key={item.id}>
               <div className="jogo">
-                <img src={`http://localhost:5000/${item.imagem}`} className="stock" alt="Imagem do Jogo"/>
+                <img src={`http://191.234.200.182:5000/${item.imagem}`} className="stock" alt="Imagem do Jogo"/>
                 <h1 className="nome">{item.nome}</h1>
                 <h1 className="preco">R$ {item.preco}</h1>
               </div>
