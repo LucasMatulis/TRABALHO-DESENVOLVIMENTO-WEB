@@ -82,10 +82,11 @@ function Cadastro(){
                         <label for="">Inserir Preço:</label>
                         <input type="text" className="Nome" placeholder="R$ 0.00" value={precoJogo} onChange={(e)=>setPrecoJogo(e.target.value)}/>
                         <input className="adicionar" type="button" value="Adicionar" onClick={salvarJogo}/>
-                        <button onClick={alert(arquivo)}>teste</button>
                     </div>
                 </div>
             </div>
+
+            <button className="adicionar" onClick={alert(arquivo)}>teste</button>
                 
         </section>
     );
