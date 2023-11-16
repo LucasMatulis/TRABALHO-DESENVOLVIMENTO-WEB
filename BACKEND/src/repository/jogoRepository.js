@@ -3,14 +3,14 @@ import { con } from "./connection.js";
 
 export async function salvar(jogo) {
   const comando = `
-      INSERT INTO Jogos (nomeJogo, precoJogo, imagemJogo)
-                    VALUES (?, ?, ?)
+      INSERT INTO Jogos (nomeJogo, precoJogo)
+                    VALUES (?, ?)
   `
 
-  const [info] = await con.query(comando, [jogo.nomeJogo, jogo.precoJogo,jogo.imagemJogo])
+  const [info] = await con.query(comando, [jogo.nomeJogo, jogo.precoJogo])
   jogo.id = info.insertId;
   
-  return jogo;
+  return jogo.id;
 }
 
 
