@@ -33,7 +33,7 @@ function Cadastro() {
             try {
 
                 let r = await axios.post('http://20.197.242.211:5000/jogo', body)
-                let id = r.data
+                let id = r.data.id
 
                 if (arquivo) {
                     r = await axios.put(`http://20.197.242.211:5000/jogo/${id}/capa`, formData, {

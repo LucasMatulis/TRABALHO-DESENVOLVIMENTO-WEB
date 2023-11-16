@@ -10,7 +10,7 @@ export async function salvar(jogo) {
   const [info] = await con.query(comando, [jogo.nomeJogo, jogo.precoJogo])
   jogo.id = info.insertId;
   
-  return jogo.id;
+  return jogo;
 }
 
 
