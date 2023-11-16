@@ -18,12 +18,9 @@ function Cadastro() {
 
     async function salvarJogo() {
 
-        console.log(arquivo)
-
         if (!nomeJogo || !precoJogo || precoJogo <= 0) {
             alert('Preço ou nome invalidos.');
         } else {
-
 
             let body = {
                 nomeJogo: nomeJogo,
@@ -34,7 +31,6 @@ function Cadastro() {
 
                 let r = await axios.post('http://20.197.242.211:5000/jogo', body)
                 let id = r.data.id
-                alert("Imagem: "+arquivo+"\nId: "+id)
                 if (arquivo) {
                     r = await axios.put(`http://20.197.242.211:5000/jogo/${id}/capa`, formData, {
                         headers: { 'Content-Type': 'multipart/form-data' },
