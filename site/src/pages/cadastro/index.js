@@ -19,10 +19,13 @@ function Cadastro(){
         async function salvarJogo() {
 
             
-           // alert(arquivo)
+           alert(arquivo)
 
-            if (!nomeJogo || !precoJogo || precoJogo<=0) {
+            if (!nomeJogo || !precoJogo || precoJogo<=0 || !/^\d*\.?\d{0,2}$/.test(precoJogo)) {
               alert('Preço ou nome invalidos.');
+              setNomeJogo("")
+              setPrecoJogo("")
+              setArquivo(`http://20.197.242.211:5000/storage/branco.png`)
             } else {
 
                 
@@ -31,7 +34,7 @@ function Cadastro(){
     
 
                 let body={
-                    nomeJogo:nomeJogo,
+                    nomeJogo:nomeJogo.trim(),
                     precoJogo:Number(precoJogo)
                 }
 
@@ -40,7 +43,7 @@ function Cadastro(){
                 let r= await axios.post('http://20.197.242.211:5000/jogo', body)
                 let id= r.data.id
 
-                if (arquivo) {
+                if (arquivo && arquivo!=`http://20.197.242.211:5000/storage/branco.png`) {
                     r = await axios.put(`http://20.197.242.211:5000/jogo/${id}/capa`, formData, {
                         headers: { 'Content-Type': 'multipart/form-data' },
                     });

@@ -27,7 +27,8 @@ function Edicao(){
         }
 
         async function atualizarJogo(item) {
-            if (!nomeJogo && !precoJogo && !arquivo || precoJogo<=0) {
+          
+            if (!nomeJogo && !precoJogo && !arquivo) {
                 alert("Nenhuma alteração feita ou ação invalida");
                 return;
             }
@@ -37,9 +38,14 @@ function Edicao(){
 
             let jogoAtualizado = {
                 id: item.id,
-                nomeJogo: nomeJogo || item.nome,
+                nomeJogo: nomeJogo.trim() || item.nome.trim(),
                 precoJogo: precoJogo !== "" ? Number(precoJogo) : item.preco
             };
+
+            if(jogoAtualizado.precoJogo<=0 || !/^\d*\.?\d{0,2}$/.test(jogoAtualizado.precoJogo)){
+              alert("Preço invalido");
+              return;
+            }
 
             try {
                 let r = await axios.put(`http://20.197.242.211:5000/jogo/${jogoAtualizado.id}`, jogoAtualizado);
