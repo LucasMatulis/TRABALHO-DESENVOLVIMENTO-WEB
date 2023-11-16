@@ -21,7 +21,7 @@ endpoints.post('/jogo',async (req, resp) => {
     // outras validações
 
     let r = await salvar(jogo);
-    resp.send(r);
+    resp.send(r.data);
   }
   catch (err) {
     resp.status(400).send({
