@@ -22,23 +22,15 @@ function Cadastro(){
               alert('Preço ou nome invalidos.');
             } else {
     
-                const formData = new FormData();
-                formData.append('capa', arquivo);
 
                 let body={
                     nomeJogo:nomeJogo,
-                    precoJogo:Number(precoJogo),
+                    precoJogo:Number(precoJogo)
                 }
 
                 try {
                 let r= await axios.post('http://20.197.242.211:5000/jogo', body)
                 let id= r.data.id
-
-                if (arquivo) {
-                    r = await axios.put(`http://20.197.242.211:5000/jogo/${id}/capa`, formData, {
-                        headers: { 'Content-Type': 'multipart/form-data' },
-                    });
-                    }
     
                 alert("Jogo cadastrado. Id: "+id)
                 }
