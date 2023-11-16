@@ -8,7 +8,7 @@ const endpoints = Router();
 const upload=multer({dest: './storage'})
 
 
-endpoints.post('/jogo',upload.single('capa') ,async (req, resp) => {
+endpoints.post('/jogo',async (req, resp) => {
   try {
     let jogo = req.body;
 
@@ -21,8 +21,6 @@ endpoints.post('/jogo',upload.single('capa') ,async (req, resp) => {
     // outras validações
 
     let r = await salvar(jogo);
-    resp.send(r);
-    r= await salvarCapa(jogo)
     resp.send(r);
   }
   catch (err) {
