@@ -44,7 +44,7 @@ export async function buscarPorId(id) {
 
 
 export async function alterar(id, jogo) {
-  const comando=`  UPDATE retrogames.Jogos
+  const comando=`  UPDATE Jogos
                     SET
                     nomeJogo = ?,
                     precoJogo = ?
@@ -57,7 +57,7 @@ export async function alterar(id, jogo) {
 }
 
 export async function alterarCapa(id, caminho) {
-  const comando=`  UPDATE retrogames.Jogos
+  const comando=`  UPDATE Jogos
                     SET
                     imagemJogo = ?
                     WHERE idJogo = ?`
