@@ -54,7 +54,6 @@ function Edicao(){
                 window.location.reload(false);
             } catch (error) {
                 console.error("Erro ao atualizar jogo:", error);
-                console.log(`http://20.197.242.211:5000/jogo/${jogoAtualizado.id}`);
             }
         }
 

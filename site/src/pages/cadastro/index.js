@@ -30,7 +30,7 @@ function Cadastro(){
                     precoJogo:Number(precoJogo),
                 }
 
-    
+                try {
                 let r= await axios.post('http://20.197.242.211:5000/jogo', body)
                 let id= r.data.id
 
@@ -41,6 +41,10 @@ function Cadastro(){
                     }
     
                 alert("Jogo cadastrado. Id: "+id)
+                }
+                    catch (error) {
+                        console.error("Erro ao Criar jogo:", error);
+                }
 
                 setNomeJogo("")
                 setPrecoJogo("")
