@@ -38,7 +38,7 @@ function Edicao(){
             let jogoAtualizado = {
                 id: item.id,
                 nomeJogo: nomeJogo || item.nome,
-                precoJogo: precoJogo !== "" ? Number(precoJogo) : item.preco,
+                precoJogo: precoJogo !== "" ? Number(precoJogo) : item.preco
             };
 
             try {

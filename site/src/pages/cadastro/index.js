@@ -18,6 +18,8 @@ function Cadastro(){
 
         async function salvarJogo() {
 
+            console.log(arquivo)
+
             if (!nomeJogo || !precoJogo || precoJogo<=0) {
               alert('Preço ou nome invalidos.');
             } else {
@@ -29,8 +31,16 @@ function Cadastro(){
                 }
 
                 try {
+                
                 let r= await axios.post('http://20.197.242.211:5000/jogo', body)
                 let id= r.data.id
+
+                if (arquivo) {
+                    r = await axios.put(`http://20.197.242.211:5000/jogo/${id}/capa`, formData, {
+                        headers: { 'Content-Type': 'multipart/form-data' },
+                    });
+                }
+    
     
                 alert("Jogo cadastrado. Id: "+id)
                 }
