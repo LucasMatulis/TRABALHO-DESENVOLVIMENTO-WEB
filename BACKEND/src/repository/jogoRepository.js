@@ -20,7 +20,7 @@ export async function listar() {
             nomeJogo        as nome,
             precoJogo      as preco,
             imagemJogo   as imagem
-       FROM jogos
+       FROM Jogos
   `
 
   const [linhas] = await con.query(comando);
@@ -34,7 +34,7 @@ export async function buscarPorId(id) {
         nomeJogo        as nome,
         precoJogo      as preco,
         imagemJogo   as imagem
-    FROM jogos
+    FROM Jogos
       WHERE idJogo=?
   `
 
@@ -44,7 +44,7 @@ export async function buscarPorId(id) {
 
 
 export async function alterar(id, jogo) {
-  const comando=`  UPDATE retrogames.jogos
+  const comando=`  UPDATE retrogames.Jogos
                     SET
                     nomeJogo = ?,
                     precoJogo = ?
@@ -57,7 +57,7 @@ export async function alterar(id, jogo) {
 }
 
 export async function alterarCapa(id, caminho) {
-  const comando=`  UPDATE retrogames.jogos
+  const comando=`  UPDATE retrogames.Jogos
                     SET
                     imagemJogo = ?
                     WHERE idJogo = ?`
@@ -70,7 +70,7 @@ export async function alterarCapa(id, caminho) {
 
 
 export async function remover(id) {
-  const comando = 'DELETE FROM jogos WHERE idJogo = ?'
+  const comando = 'DELETE FROM Jogos WHERE idJogo = ?'
 
   const [info] = await con.query(comando, [id])
   return info.affectedRows;
