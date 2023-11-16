@@ -11,35 +11,40 @@ function Cadastro(){
 
     const [nomeJogo, setNomeJogo]=useState("");
     const [precoJogo, setPrecoJogo]=useState("")
-    const [selectedImage, setSelectedImage] = useState(`http://20.197.242.211:5000/storage/branco.png`);
+    const [arquivo, setArquivo]=useState(`http://20.197.242.211:5000/storage/branco.png`);
 
-        const handleImageSelect = (e) => {
-            const file = e.target.files[0];
-            setSelectedImage(URL.createObjectURL(file));
-        };
 
 
 
         async function salvarJogo() {
 
-            if (!nomeJogo || !precoJogo) {
-              alert('Por favor, insira o nome ou preco.');
+            if (!nomeJogo || !precoJogo || precoJogo<=0) {
+              alert('Preço ou nome invalidos.');
             } else {
     
+                const formData = new FormData();
+                formData.append('capa', arquivo);
+
                 let body={
                     nomeJogo:nomeJogo,
                     precoJogo:Number(precoJogo),
-                    imagemJogo:selectedImage
                 }
+
     
                 let r= await axios.post('http://20.197.242.211:5000/jogo', body)
                 let id= r.data.id
+
+                if (arquivo) {
+                    r = await axios.put(`http://20.197.242.211:5000/jogo/${id}/capa`, formData, {
+                        headers: { 'Content-Type': 'multipart/form-data' },
+                    });
+                    }
     
                 alert("Jogo cadastrado. Id: "+id)
 
                 setNomeJogo("")
                 setPrecoJogo("")
-                setSelectedImage("/assets/images/branco.png")
+                setArquivo(`http://20.197.242.211:5000/storage/branco.png`)
             }
     
           }
@@ -62,8 +67,8 @@ function Cadastro(){
 
                 <div className="cadastro">
                     <div className="imagem">
-                    {selectedImage &&<img src={selectedImage} className="stock"/>}
-                                <input type="file"  accept="image/*" className="link" onChange={handleImageSelect}/>                    
+                    {arquivo &&<img src={arquivo} className="stock"/>}
+                                <input type="file"  accept="image/*" className="link" onChange={(e) => setArquivo(e.target.files[0])}/>                    
                     </div>
                     <div className="inputs">
                         <label for="">Inserir Nome:</label>

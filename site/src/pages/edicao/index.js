@@ -27,8 +27,8 @@ function Edicao(){
         }
 
         async function atualizarJogo(item) {
-            if (!nomeJogo && !precoJogo && !arquivo) {
-                alert("Nenhuma alteração feita");
+            if (!nomeJogo && !precoJogo && !arquivo || precoJogo<=0) {
+                alert("Nenhuma alteração feita ou ação invalida");
                 return;
             }
 
