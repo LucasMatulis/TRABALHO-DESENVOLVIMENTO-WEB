@@ -19,8 +19,6 @@ function Cadastro(){
         async function salvarJogo() {
 
             
-           alert(arquivo)
-
             if (!nomeJogo || !precoJogo || precoJogo<=0 || !/^\d*\.?\d{0,2}$/.test(precoJogo)) {
               alert('Preço ou nome invalidos.');
               setNomeJogo("")
