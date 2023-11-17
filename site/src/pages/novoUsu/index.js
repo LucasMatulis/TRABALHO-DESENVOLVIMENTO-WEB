@@ -24,7 +24,7 @@ function NovoUsu(){
               alert('Nome de usuário já está em uso. Por favor, escolha outro nome.');
           } else {
               let body = {
-                  nome: nome,
+                  nome: nome.trim(),
                   senha: senha
               }
   
