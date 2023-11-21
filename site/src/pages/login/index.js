@@ -5,7 +5,7 @@ import axios from 'axios';
 
 
 
-function Login(){
+export default  function Login(){
 
     const [nome, setNome]= useState("")
     const [senha, setSenha]=useState("")
@@ -81,4 +81,3 @@ function Login(){
     );
 }
 
-export default Login;

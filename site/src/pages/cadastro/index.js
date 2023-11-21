@@ -6,7 +6,7 @@ import axios from 'axios';
 
 
 
-function Cadastro(){
+export default function Cadastro(){
 
 
     const [nomeJogo, setNomeJogo]=useState("");
@@ -71,9 +71,9 @@ function Cadastro(){
 
                 <div className="logo">
                 <Link className="home" to="/">
-        <figure class="logo_contain"> <img src="/assets/images/logo.png" className="controle" alt="Logo" routerLink="/"/> </figure>
-        </Link>
-                    <strong>RETRO GAMES</strong>
+                <       figure class="logo_contain"> <img src="/assets/images/logo.png" className="controle" alt="Logo" routerLink="/"/> </figure>
+                </Link>
+                <strong>RETRO GAMES</strong>
                 </div>
             </header>
 
@@ -103,5 +103,3 @@ function Cadastro(){
 
 
 }
-
-export default Cadastro;

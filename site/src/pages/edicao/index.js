@@ -5,7 +5,7 @@ import axios from 'axios';
 
 
 
-function Edicao(){
+export default  function Edicao(){
 
     const [listaJogos, setListaJogos] = useState([]); 
     const [nomeJogo, setNomeJogo]=useState("");
@@ -178,5 +178,3 @@ function Edicao(){
             </section>
           );
         }
-        
-        export default Edicao;

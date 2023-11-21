@@ -5,7 +5,7 @@ import axios from 'axios';
 
 
 
-function NovoUsu(){
+export default  function NovoUsu(){
 
     const [nome, setNome]= useState("")
     const [senha, setSenha]=useState("")
@@ -78,5 +78,3 @@ function NovoUsu(){
         </section>
     );
 }
-
-export default NovoUsu;

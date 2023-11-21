@@ -3,7 +3,7 @@ import './index.scss';
 import React from 'react';
 
 
-function Adm(){
+export default  function Adm(){
 
         const { nome }= useParams();
         
@@ -31,4 +31,3 @@ function Adm(){
     );
 }
 
-export default Adm;

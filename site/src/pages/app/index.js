@@ -4,10 +4,9 @@ import { useState, useEffect, useRef  } from 'react';
 import axios from 'axios';
 
 
-function App() {
+export default  function App() {
   const [listaJogos, setListaJogos] = useState([]);
   const [termoPesquisa, setTermoPesquisa] = useState('');
-  const swiperRef = useRef(null);
 
   async function buscarJogo() {
     let r = await axios.get('http://20.197.242.211:5000/jogo');
@@ -47,31 +46,29 @@ function App() {
 
         <body className='home'>
         {jogosFiltrados.map((item) => (
-              <div class="slider-container">
-              <div class="slide-content">
-                  <div class="card-wrapper">
-                      <div class="card">
-                          <div class="image-content">
-                              <span class="overlay"></span>
-
-                              <div class="card-image">
-                                  <img src={`http://20.197.242.211:5000/${item.imagem}`} alt="" class="card-img"/>
-                              </div>
-                          </div>
-                          <div class="card-content">
-                          <h1 class="name">{item.nome}</h1>
-                          <h2 class="precoo">R$ {item.preco}</h2>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              </div>
-          
-        ))}
+           <Link to={`/produto/${item.id}`}>
+            <div class="slider-container" key={item.id}>
+                    <div class="slide-content">
+                        <div class="card-wrapper">
+                            <div class="card">
+                                <div class="image-content">
+                                    <span class="overlay"></span>
+                                    <div class="card-image">
+                                        <img src={`http://20.197.242.211:5000/${item.imagem}`} alt="" class="card-img" />
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <h1 class="name">{item.nome}</h1>
+                                    <h2 class="precoo">R$ {item.preco}</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </Link>
+    ))}
         </body>
       
     </section>
   );
 }
-
-export default App;

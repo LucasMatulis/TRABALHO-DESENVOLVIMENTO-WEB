@@ -8,6 +8,7 @@ import Cadastro from './pages/cadastro';
 import Edicao from './pages/edicao';
 import NaoEncontrado from './pages/naoEncontrado';
 import NovoUsu from './pages/novoUsu';
+import Produto from './pages/produto';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
@@ -23,6 +24,7 @@ root.render(
         <Route path='/cadastro' element={<Cadastro />} />
         <Route path='/edicao' element={<Edicao />} />
         <Route path='/novoUsu' element={<NovoUsu />} />
+        <Route path='/produto/:id' element={<Produto />} />
         <Route path='/*' element={<NaoEncontrado />} />
       </Routes>
     </BrowserRouter>
