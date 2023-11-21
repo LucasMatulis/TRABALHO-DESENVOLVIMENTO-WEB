@@ -33,7 +33,8 @@ function Cadastro(){
 
                 let body={
                     nomeJogo:nomeJogo.trim(),
-                    precoJogo:Number(precoJogo)
+                    precoJogo:Number(precoJogo),
+                    imagemJogo:"storage/branco.png"
                 }
 
                 try {
