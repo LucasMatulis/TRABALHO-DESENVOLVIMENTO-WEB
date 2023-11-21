@@ -115,7 +115,9 @@ function Edicao(){
                 </Link>
         
                 <div className="logo">
-                  <img src="/assets/images/logo.png" className="controle" alt="Logo" />
+                <Link className="home" to="/">
+        <figure class="logo_contain"> <img src="/assets/images/logo.png" className="controle" alt="Logo" routerLink="/"/> </figure>
+        </Link>
                   <strong>RETRO GAMES</strong>
                 </div>
               </header>

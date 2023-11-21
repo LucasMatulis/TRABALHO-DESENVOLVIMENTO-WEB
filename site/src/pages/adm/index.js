@@ -12,7 +12,9 @@ function Adm(){
     return(
         <section>
                     <header className="logo">
-                        <img src="/assets/images/logo.png" className="controle"/>
+                    <Link className="home" to="/">
+        <figure class="logo_contain"> <img src="/assets/images/logo.png" className="controle" alt="Logo" routerLink="/"/> </figure>
+        </Link>
                         <strong>RETRO GAMES</strong>
                     </header>
 

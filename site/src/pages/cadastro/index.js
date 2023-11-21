@@ -69,7 +69,9 @@ function Cadastro(){
                 <Link className="produto" to="/edicao">EDIÇÃO DE PRODUTO</Link>
 
                 <div className="logo">
-                    <img src='/assets/images/logo.png' className="controle"/>
+                <Link className="home" to="/">
+        <figure class="logo_contain"> <img src="/assets/images/logo.png" className="controle" alt="Logo" routerLink="/"/> </figure>
+        </Link>
                     <strong>RETRO GAMES</strong>
                 </div>
             </header>

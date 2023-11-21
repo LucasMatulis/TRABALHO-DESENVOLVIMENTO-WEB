@@ -29,7 +29,10 @@ function App() {
     <section>
       <header>
         <div className="logo">
-          <img src="/assets/images/logo.png" className="controle" alt="Logo" />
+        <Link className="home" to="/">
+        <figure class="logo_contain"> <img src="/assets/images/logo.png" className="controle" alt="Logo" routerLink="/"/> </figure>
+        </Link>
+     
           <strong>RETRO GAMES</strong>
         </div>
         <input className="pesquisa" type="search" placeholder="DIGITE O NOME DO JOGO" value={termoPesquisa} onChange={handlePesquisa}/>
@@ -38,6 +41,7 @@ function App() {
         </Link>
       </header>
 
+      
       <div>
         <ul>
           {jogosFiltrados.map((item) => (
@@ -50,7 +54,31 @@ function App() {
             </li>
           ))}
         </ul>
+        </div>
+      
+      <body className='home'>
+      <div class="slider-container">
+        <div class="slide-content">
+            <div class="card-wrapper">
+                 <div class="card">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+
+                         <div class="card-image">
+                            <img src="/assets/images/metalslug.webp" alt="" class="card-img"/>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                    <h1 class="name">metal slug</h1>
+                    <h2 class="precoo">R$ 10 </h2>
+                    </div>
+                 </div>
+            </div>
+         </div>
       </div>
+   
+      </body>
+      
     </section>
   );
 }

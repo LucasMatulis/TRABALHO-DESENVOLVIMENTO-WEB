@@ -13,22 +13,8 @@
     src: url(../../../public/assets/fonts/Inria.ttf);
   }
 
-  body,html{
-     overflow-x: hidden;
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-}
 
 
-  .cabecalho{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    background-color: white;
-    gap: 100px;
-    background-image: url("../../../public/assets/images/SMB_NES_World_1-1_Map.png");
-    background-position: left 50% top 0%;
 
     a{
         position: relative;
@@ -43,25 +29,11 @@
         }
     }
 
-    .logo{
-      position: relative;
-      left: 70%;
-      display: flex;
-      flex-direction: column;
-      
-      strong{
-          font: 16px inter;
-          font-weight: bolder;
-          text-align: center;
-      }
+    
   
   
-      img{
-      height: 60px;
-      width: 140px;
-      }
-  }
-  }
+  
+  
 
   div{
     display: flex;

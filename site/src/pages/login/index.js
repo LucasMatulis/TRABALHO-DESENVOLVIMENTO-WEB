@@ -51,12 +51,18 @@ function Login(){
     
     
     return(
+        
         <section className='Entrada'>
                 <header className="logo">
-                    <img src="/assets/images/logo.png" className="controle"/>
-                    <strong>RETRO GAMES</strong>
+                <div className="logo">
+        <Link className="home" to="/">
+        <figure class="logo_contain"> <img src="/assets/images/logo.png" className="controle" alt="Logo" routerLink="/"/> </figure>
+        </Link>
+     
+          <strong>RETRO GAMES</strong>
+        </div>
                 </header>
-
+                
                 <div className="Bloco1">
                     <h1 className="Login">LOGIN</h1>
                     <div className="InsiraNome">
@@ -69,6 +75,7 @@ function Login(){
                     </div>
                     <button to={nome ? `/adm/${nome}` : '/login'} className="entrar" onClick={verificarUsuario}>ENTRAR</button>
                     <Link to="/novoUsu" className="cadastrar">CADASTRAR</Link>
+                    
                 </div>
         </section>
     );
