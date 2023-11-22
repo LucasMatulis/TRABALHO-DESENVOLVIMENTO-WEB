@@ -11,7 +11,7 @@ export default function Cadastro(){
 
     const [nomeJogo, setNomeJogo]=useState("");
     const [precoJogo, setPrecoJogo]=useState("")
-    const [arquivo, setArquivo]=useState(`http://20.197.242.211:5000/storage/branco.png`);
+    const [arquivo, setArquivo]=useState(`http://localhost:5000/storage/branco.png`);
 
 
 
@@ -23,7 +23,7 @@ export default function Cadastro(){
               alert('Preço ou nome invalidos.');
               setNomeJogo("")
               setPrecoJogo("")
-              setArquivo(`http://20.197.242.211:5000/storage/branco.png`)
+              setArquivo(`http://localhost:5000/storage/branco.png`)
             } else {
 
                 
@@ -39,11 +39,11 @@ export default function Cadastro(){
 
                 try {
                 
-                let r= await axios.post('http://20.197.242.211:5000/jogo', body)
+                let r= await axios.post('http://localhost:5000/jogo', body)
                 let id= r.data.id
 
-                if (arquivo && arquivo!=`http://20.197.242.211:5000/storage/branco.png`) {
-                    r = await axios.put(`http://20.197.242.211:5000/jogo/${id}/capa`, formData, {
+                if (arquivo && arquivo!=`http://localhost:5000/storage/branco.png`) {
+                    r = await axios.put(`http://localhost:5000/jogo/${id}/capa`, formData, {
                         headers: { 'Content-Type': 'multipart/form-data' },
                     });
                 }
@@ -57,7 +57,7 @@ export default function Cadastro(){
 
                 setNomeJogo("")
                 setPrecoJogo("")
-                setArquivo(`http://20.197.242.211:5000/storage/branco.png`)
+                setArquivo(`http://localhost:5000/storage/branco.png`)
             }
     
           }

@@ -9,7 +9,7 @@ export default  function App() {
   const [termoPesquisa, setTermoPesquisa] = useState('');
 
   async function buscarJogo() {
-    let r = await axios.get('http://20.197.242.211:5000/jogo');
+    let r = await axios.get('http://localhost:5000/jogo');
     let jogos = r.data;
     setListaJogos(jogos);
   }
@@ -54,7 +54,7 @@ export default  function App() {
                                 <div class="image-content">
                                     <span class="overlay"></span>
                                     <div class="card-image">
-                                        <img src={`http://20.197.242.211:5000/${item.imagem}`} alt="" class="card-img" />
+                                        <img src={`http://localhost:5000/${item.imagem}`} alt="" class="card-img" />
                                     </div>
                                 </div>
                                 <div class="card-content">
