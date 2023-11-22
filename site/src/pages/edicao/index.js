@@ -55,10 +55,12 @@ export default  function Edicao(){
                     headers: { 'Content-Type': 'multipart/form-data' },
                 });
                 }
-
+                setNomeJogo("");
+                setPrecoJogo("");
+                setArquivo(undefined);
                 alert("Jogo Alterado. Id: " + item.id);
-                window.location.reload(false);
-            } catch (error) {
+                buscarJogo();            
+              } catch (error) {
                 console.error("Erro ao atualizar jogo:", error);
             }
         }
@@ -74,8 +76,8 @@ export default  function Edicao(){
                 try {
                         let response = await axios.delete(`http://20.197.242.211:5000/jogo/${id}`);
                         alert("Jogo Deletado. Id: " + idInfo);
-                        window.location.reload(false)
-                    } catch (error) {
+                        buscarJogo();                    
+                      } catch (error) {
                         console.error("Erro ao deletar jogo:", error);
                         console.log(`http://20.197.242.211:5000/jogo/${id}`)
                 }           
@@ -115,58 +117,30 @@ export default  function Edicao(){
                 </Link>
         
                 <div className="logo">
-                <Link className="home" to="/">
-        <figure class="logo_contain"> <img src="/assets/images/logo.png" className="controle" alt="Logo" routerLink="/"/> </figure>
-        </Link>
+                  <Link className="home" to="/">
+                        <figure class="logo_contain"> <img src="/assets/images/logo.png" className="controle" alt="Logo" routerLink="/"/> </figure>
+                  </Link>
                   <strong>RETRO GAMES</strong>
                 </div>
               </header>
         
               <div>
-                <input
-                  className="pesquisaEdit"
-                  type="search"
-                  placeholder="Pesquisar por nome do jogo"
-                  value={termoPesquisa}
-                  onChange={handlePesquisa}
-                />
+                <input className="pesquisaEdit" type="search" placeholder="Pesquisar por nome do jogo" value={termoPesquisa} onChange={handlePesquisa}/>
                 <ul>
                   {jogosFiltrados.map((item) => (
                     <li key={item.id}>
                       <div className="cadastro">
                         <div className="imagem">
-                          <img
-                            src={`http://20.197.242.211:5000/${item.imagem}`}
-                            className="stock"
-                            alt="Imagem do Jogo"
-                          />
-                          <input
-                            type="file"
-                            accept="image/*"
-                            className="link"
-                            onChange={(e) => setArquivo(e.target.files[0])}
-                          />
+                          <img src={`http://20.197.242.211:5000/${item.imagem}`} className="stock" alt="Imagem do Jogo"/>
+                          <input type="file" accept="image/*" className="link" onChange={(e) => setArquivo(e.target.files[0])}/>
                         </div>
                         <div className="inputs">
                           <label htmlFor="">Inserir Nome:</label>
-                          <input
-                            type="text"
-                            className="Nome"
-                            placeholder={item.nome}
-                            onChange={(e) => setNomeJogo(e.target.value)}
-                          />
+                          <input type="text" className="Nome" placeholder={item.nome} onChange={(e) => setNomeJogo(e.target.value)}/>
                           <label htmlFor="">Inserir Preço:</label>
-                          <input
-                            type="text"
-                            className="Nome"
-                            placeholder={item.preco}
-                            onChange={(e) => setPrecoJogo(e.target.value)}
-                          />
+                          <input type="text" className="Nome" placeholder={item.preco} onChange={(e) => setPrecoJogo(e.target.value)}/>
                           <div>
-                            <button
-                              className="botao"
-                              type="button"
-                              onClick={() => atualizarJogo(item)}> EDITAR</button>
+                            <button className="botao" type="button" onClick={() => atualizarJogo(item)}> EDITAR</button>
                             <button className="botao" type="button" onClick={() => deletarJogo(item.id)}>DELETAR</button>
                           </div>
                         </div>
