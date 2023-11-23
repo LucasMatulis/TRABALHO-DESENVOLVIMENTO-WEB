@@ -180,6 +180,7 @@ li{
     flex: 0 0 calc(25% - 20px); 
     margin-bottom: 20px; 
     box-sizing: border-box; 
+    text-decoration: none;
   }
 
 }
@@ -208,6 +209,7 @@ li{
   background-color: #665cbe;
  padding: 6px 125px;
   border-radius: 7px;
+  color: white;
  
 }
 
@@ -249,7 +251,7 @@ border: 3px solid #665cbe;
         position: relative;
         display: flex;
         flex-direction: column;
-        left: 350px;
+        left: 15%;
         gap: 10px;
         padding-top: 100px;
         padding-bottom: 50px;
@@ -258,7 +260,7 @@ border: 3px solid #665cbe;
             display: flex;
             flex-direction: row;
             gap: 10px;
-            left: -150px;
+            left: 15%;
         }
     }
     p{
@@ -417,6 +419,19 @@ border: 3px solid #665cbe;
 
   .game-item {
     flex: 0 0 calc(50% - 20px);
+  }
+
+  .faixa6 {
+    flex-direction: column; 
+    padding: 20px; 
+  }
+
+  .faixa6 p {
+    font-size: 14px; 
+  }
+
+  .faixa6 a {
+    margin-bottom: 10px;
   }
 }
 

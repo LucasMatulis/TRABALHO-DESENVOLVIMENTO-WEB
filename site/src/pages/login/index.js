@@ -15,7 +15,7 @@ export default  function Login(){
 
 
       async function buscarUsuario() {
-        let r = await axios.get('http://localhost:5000/adm');
+        let r = await axios.get('http://20.197.242.211:5000/adm');
         let usuarios = r.data;
     
         setListaUsuarios(usuarios);
