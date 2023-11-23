@@ -73,11 +73,11 @@ export default  function Login(){
                     <h1 className="Login">LOGIN</h1>
                     <div className="InsiraNome">
                       
-                        <label className='loogin'>Insira seu nome<input className='looogin' type="text" value={nome} placeholder="Nome" onChange={(e)=>setNome(e.target.value)}/></label>
+                        <label className='loogin'><input className='looogin' type="text" value={nome} placeholder="Nome" onChange={(e)=>setNome(e.target.value)}/></label>
                     </div>
                     <div className="InsiraSenha">
                        
-                        <label className='loogin'>Insira sua Senha<input className='looogin' type="password" value={senha} placeholder="Senha" onChange={(e)=> setSenha(e.target.value)}/></label>
+                        <label className='loogin'><input className='looogin' type="password" value={senha} placeholder="Senha" onChange={(e)=> setSenha(e.target.value)}/></label>
                     </div>
                     <button to={nome ? `/adm/${nome}` : '/login'} className="entrarlogin" onClick={verificarUsuario}>ENTRAR</button>
                     <Link to="/novoUsu" className="cadastrarlogin">CADASTRAR</Link>

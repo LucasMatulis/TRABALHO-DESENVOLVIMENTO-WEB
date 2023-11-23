@@ -90,7 +90,7 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        left: 726px;
+        left: 61%;
         font: 32px gemunu;
         font-weight: bolder;
 
@@ -104,7 +104,7 @@
             border: none;
             font-size: larger;
             border-radius: 25px;
-            left: 77%;
+            margin-bottom: 50px;
             top: -120px;
         }
     }
@@ -113,5 +113,18 @@
 
 }
 
+@media only screen and (max-width: 1366px){
+
+    .login{
+        left:12xp;
+    }
+
+
+        .loogin{
+            left: 12px;
+        }
+
+
+}
 
 
