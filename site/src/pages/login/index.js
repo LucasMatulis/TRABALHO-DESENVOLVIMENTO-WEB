@@ -59,18 +59,18 @@ export default  function Login(){
         <figure class="logo_contain"> <img src="/assets/images/logo.png" className="controle" alt="Logo" routerLink="/"/> </figure>
         </Link>
      
-          <strong>RETRO GAMES</strong>
+          <strong className='loginstrong'>RETRO GAMES</strong>
         </div>
                 </header>
                 
                 <div className="Bloco1">
                     <h1 className="Login">LOGIN</h1>
                     <div className="InsiraNome">
-                        <img className="seta1" src="/assets/images/Seta.png"/>
+                      
                         <label>Insira seu nome<input type="text" value={nome} placeholder="Nome" onChange={(e)=>setNome(e.target.value)}/></label>
                     </div>
                     <div className="InsiraSenha">
-                        <img className="seta2" src="/assets/images/Seta.png" />
+                       
                         <label>Insira sua Senha<input type="password" value={senha} placeholder="Senha" onChange={(e)=> setSenha(e.target.value)}/></label>
                     </div>
                     <button to={nome ? `/adm/${nome}` : '/login'} className="entrar" onClick={verificarUsuario}>ENTRAR</button>

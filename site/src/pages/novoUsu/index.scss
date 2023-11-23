@@ -42,13 +42,23 @@ body,html{
 .Bloco1{
     display: flex;
     flex-direction: column;
+    
 
-    .NovoUsuario{
+    .NovoUsuario1{
         position: relative;
-        left: 400px;
-        font: 96px retrofont ;
-        color: #D33F3F;
+        left: 65%;
+        font: 80px retrofont ;
+        color: #665cbe;
+        top: -100px;
+       
     }
+    .NovoUsuario2{
+        position: relative;
+        left: 60%;
+        font: 80px retrofont ;
+        color: #665cbe;
+        top: -240px;
+}
 
     div{
         display: flex;
@@ -76,9 +86,12 @@ body,html{
                 position: relative;
                 width: 526px;
                 height: 65px;
-                background-color: #C2B7B4;
+                background-color: white;
                 border: none;
                 font-size: larger;
+                border-radius: 25px;
+                left: 77%;
+                top: -190px;
             }
         }
         &:hover{
@@ -92,33 +105,35 @@ body,html{
 
     .entrar{
         position: relative;
-        left: 830px;
+        left: 66%;
         top: 100px;
         width: 281px;
         text-decoration: none;
         font: 40px retrofont ;
-        color: #D33F3F;
+        color: #665cbe;
+        background-color: transparent; 
+        border:none;
+        top: -50px;
+        
 
-        &:hover{
-            color: #e97373;
-        }
+      
 
     }
 
     .cadastrarBU{
         position: relative;
-        left: 760px;
+        left: 66%;
         top: 100px;
         width: 281px;
         text-decoration: none;
         font: 40px retrofont ;
-        color: #D33F3F;
+        color: #665cbe;
         background-color: transparent; 
         border: none;
 
         &:hover{
             cursor: pointer;
-            color: #e97373;
+            color: #665cbe;
         }
 
     }

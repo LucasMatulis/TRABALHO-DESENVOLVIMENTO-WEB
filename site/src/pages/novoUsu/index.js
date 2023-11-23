@@ -57,19 +57,24 @@ export default  function NovoUsu(){
     
     return(
         <section className='Entrada'>
-                <header className="logo">
-                    <img src="/assets/images/logo.png" className="controle"/>
-                    <strong>RETRO GAMES</strong>
-                </header>
+                <header>
+                <div className="logo">
+        <Link className="home" to="/">
+        <figure class="logo_contain"> <img src="/assets/images/logo.png" className="controle" alt="Logo" routerLink="/"/> </figure>
+        </Link>
+     
+          <strong className='loginstrong'>RETRO GAMES</strong>
+                <header/>
 
                 <div className="Bloco1">
-                    <h1 className="NovoUsuario">NOVO USUARIO</h1>
+                    <h1 className="NovoUsuario1">NOVO </h1>
+                    <h1 className="NovoUsuario2">USUARIO</h1>
                     <div className="InsiraNome">
-                        <img className="seta1" src="/assets/images/Seta.png"/>
+                        
                         <label>Insira seu nome<input type="text" value={nome} placeholder="Nome" onChange={(e)=>setNome(e.target.value)}/></label>
                     </div>
                     <div className="InsiraSenha">
-                        <img className="seta2" src="/assets/images/Seta.png" />
+                       
                         <label>Insira sua Senha<input type="password" value={senha} placeholder="Senha" onChange={(e)=> setSenha(e.target.value)}/></label>
                     </div>
                     <button className="cadastrarBU" onClick={salvarUsuario}>CADASTRAR</button>

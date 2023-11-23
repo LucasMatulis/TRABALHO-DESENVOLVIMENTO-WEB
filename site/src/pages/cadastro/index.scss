@@ -30,7 +30,9 @@
     }
 
     
-  
+  .cadastrostrong{
+    color: white;
+  }
   
   
   
@@ -41,7 +43,7 @@
 
     .titulo{
         font: 64px retrofont ;
-        color: #D33F3F;
+        color: #665cbe;
         width: 860px;
         text-align: center;
         position: relative;
@@ -53,7 +55,7 @@
       flex-direction: row;
       height: 430.67px;
       width: 1306.41px;
-      background-color: #D33F3F;
+      background-color: #665cbe;
       position: relative;
       left: 15%;
 
@@ -100,7 +102,7 @@
           left: 70%;
           font: 40px inter;
           font-weight: bold;
-          color: #D33F3F;
+          color: #665cbe;
 
           &:hover{
             cursor: pointer;

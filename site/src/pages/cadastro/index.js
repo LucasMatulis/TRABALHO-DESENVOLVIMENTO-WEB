@@ -71,9 +71,9 @@ export default function Cadastro(){
 
                 <div className="logo">
                 <Link className="home" to="/">
-                <       figure class="logo_contain"> <img src="/assets/images/logo.png" className="controle" alt="Logo" routerLink="/"/> </figure>
+                <figure class="logo_contain"> <img src="/assets/images/logo.png" className="controle" alt="Logo" routerLink="/"/> </figure>
                 </Link>
-                <strong>RETRO GAMES</strong>
+                <strong className="cadastrostrong">RETRO GAMES</strong>
                 </div>
             </header>
 
