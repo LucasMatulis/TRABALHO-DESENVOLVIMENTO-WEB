@@ -33,18 +33,27 @@ export default  function App() {
     <section>
       <header>
         <div className="logo">
-        <Link className="home" to="/">
+        <Link className="linkApp" to="/">
         <figure class="logo_contain"> <img src="/assets/images/logo.png" className="controle" alt="Logo" routerLink="/"/> </figure>
         </Link>
      
           <strong>RETRO GAMES</strong>
         </div>
-        <input className="pesquisa" type="search" placeholder="DIGITE O NOME DO JOGO" value={termoPesquisa} onChange={handlePesquisa}/>
         <Link className="admin" to="/login">
           ADMIN
         </Link>
       </header>
 
+      <div className='landingPage'>
+        <div className='landingText'>
+          <h1>RETRO GAMES</h1>
+          <figure class="logo_contain"> <img src="/assets/images/logo.png" className="controle" alt="Logo" routerLink="/"/> </figure>
+          <span>O melhor site para compra de Jogos Retro</span>
+        </div>
+        <img className='landingImage' src='/assets/images/landingImage.jpg'/>
+      </div>
+
+      <input className="pesquisa" type="search" placeholder="DIGITE O NOME DO JOGO" value={termoPesquisa} onChange={handlePesquisa}/>
       <body className="home">
                   {jogosFiltrados.map((item) => (
                     <Link to={`/produto/${item.id}`} className="game-item">
