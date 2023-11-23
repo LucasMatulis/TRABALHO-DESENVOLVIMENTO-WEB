@@ -14,8 +14,10 @@
 }
 
 body{
-background: linear-gradient(200deg,white,white,lightblue,rgb(47, 47, 255));
+  background: linear-gradient(200deg,black,black,black,black,black,black, #373165, #1d1a39);
+
 }
+
 header{
   display: flex;
   flex-direction: row;
@@ -25,7 +27,7 @@ header{
   .logo{
     position: relative;
     right:1%;
-    top: -29PX;
+    top: -3PX;
     display: flex;
     flex-direction: column;
     
@@ -34,6 +36,7 @@ header{
         font-weight: bolder;
         text-align: left;
         margin-left: 52px;
+        color: white;
     }
 
 
@@ -95,7 +98,7 @@ header{
   top: 25px;
   position: relative;
   left: 80%;
-  background-color: lightblue;
+  background-color: #665cbe;
   height: 30px;
   width: 70px;
   text-align: center;
@@ -118,7 +121,7 @@ li{
   flex-direction: row;
   height: 206.8px;
   width: 1205.16px;
-  background-color: #D33F3F;
+  background-color: #665cbe;
   position: relative;
   left: 15%;
   border-radius: 25px;
@@ -160,6 +163,7 @@ li{
       border-radius: 25px;
       position: relative;
       left: 25%;
+      margin-bottom: 50px;
 }
 
 .home{
@@ -183,7 +187,8 @@ li{
 .card{
   border-radius: 25px;
   background-color: #fff;
-
+  border: solid 4px #665cbe;
+  
 }
 
 .slide-content{
@@ -196,13 +201,26 @@ li{
   flex-direction: column;
   align-items: center;
   padding: 10px 14px;
+  
+.precoo{
+  display: flexbox;
+  
+  background-color: #665cbe;
+ padding: 6px 125px;
+  border-radius: 7px;
+ 
+}
+
+
+
+
 }
 
 
 .card-image{
 position: relative;
-height: 170px;
-width: 250px;
+height: 190px;
+width: 350px;
 }
 
 .card-image  .card-img{
@@ -210,7 +228,7 @@ height: 100%;
 width: 100%;
 object-fit: cover;
 border-radius: 10%;
-border: 3px solid #4169e1;
+border: 3px solid #665cbe;
 }
 
 
@@ -226,6 +244,9 @@ border: 3px solid #4169e1;
 }
 
 @media only screen and (max-width: 1430px) {
+
+  
+
 
   .admin{
     left: 78%;

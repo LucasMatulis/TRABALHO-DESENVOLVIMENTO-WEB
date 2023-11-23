@@ -57,28 +57,29 @@ export default  function NovoUsu(){
     
     return(
         <section className='Entrada'>
-                <header>
+                <header className="logo">
                 <div className="logo">
-        <Link className="home" to="/">
+        <Link className="linkApp" to="/">
         <figure class="logo_contain"> <img src="/assets/images/logo.png" className="controle" alt="Logo" routerLink="/"/> </figure>
         </Link>
      
-          <strong className='loginstrong'>RETRO GAMES</strong>
-                <header/>
+          <strong className='strongbranca'>RETRO GAMES</strong>
+        </div>
+                </header>
 
                 <div className="Bloco1">
                     <h1 className="NovoUsuario1">NOVO </h1>
                     <h1 className="NovoUsuario2">USUARIO</h1>
                     <div className="InsiraNome">
                         
-                        <label>Insira seu nome<input type="text" value={nome} placeholder="Nome" onChange={(e)=>setNome(e.target.value)}/></label>
+                        <label className='novousus'><input className= 'novous' type="text" value={nome} placeholder="Nome" onChange={(e)=>setNome(e.target.value)}/></label>
                     </div>
                     <div className="InsiraSenha">
                        
-                        <label>Insira sua Senha<input type="password" value={senha} placeholder="Senha" onChange={(e)=> setSenha(e.target.value)}/></label>
+                        <label className='novousus'><input className= 'novous' type="password" value={senha} placeholder="Senha" onChange={(e)=> setSenha(e.target.value)}/></label>
                     </div>
                     <button className="cadastrarBU" onClick={salvarUsuario}>CADASTRAR</button>
-                    <Link className="entrar" to="/login">VOLTAR</Link>
+                    <Link className="entrarnu" to="/login">VOLTAR</Link>
                 </div>
         </section>
     );

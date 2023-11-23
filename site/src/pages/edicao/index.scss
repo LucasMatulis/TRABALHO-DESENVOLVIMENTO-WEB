@@ -20,47 +20,25 @@
     margin: 0px;
 }
 
-  .cabecalho{
+ .cadproduto{
+  
+  
     position: relative;
-    display: flex;
-    flex-direction: row;
-    background-color: white;
-    gap: 100px;
-    background-image: url("../../../public/assets/images/SMB_NES_World_1-1_Map.png");
-    background-position: left 50% top 0%;
-
-    a{
-        position: relative;
-        text-decoration: none;
-        font: 16px inter ;
-        height:fit-content;
-        top: 20px;
-        color: black;
-
-        &:hover{
-            text-decoration: underline;
-        }
-    }
-
-    .logo{
-        position: relative;
-        left: 70%;
-        display: flex;
-        flex-direction: column;
-        
-        strong{
-            font: 16px inter;
-            font-weight: bolder;
-            text-align: center;
-        }
+    text-decoration: none;
     
-    
-        img{
-        height: 60px;
-        width: 140px;
-        }
-    }
-  }
+    background-color: #665cbe;
+    left:-3%;
+    width: 200px;  
+    height: 60px;
+    font: 30px inter ;
+    padding: 19px;
+  color: black ;
+  border-radius: 20px;
+  font-weight: bold;
+  top:10px;
+  
+}
+ 
 
   ul{
     display: flex;
@@ -129,7 +107,8 @@
         left: 30%;
         font: 40px inter;
         font-weight: bold;
-        color: #D33F3F;
+        color: #665cbe;
+        border-radius: 25px;
 
         &:hover{
           cursor: pointer;
@@ -146,12 +125,13 @@
         border: none;
         font-size: xx-large;
         font: 40px inter;
+        border-radius: 25px;
       }
     }
   }
 
   .pesquisaEdit{
-    margin-top: 10px;
+    margin-top: 40px;
     position: relative;
     left: 27%;
     height: 64px;
@@ -161,6 +141,7 @@
     font-size: xx-large;
     font: 40px inter;
     border-radius: 25px;
+    margin-bottom: 50px;
 }
 
 
@@ -171,4 +152,5 @@
     width: 10px;
     background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9IjEyMy4wNXB4IiBoZWlnaHQ9IjEyMy4wNXB4IiB2aWV3Qm94PSIwIDAgMTIzLjA1IDEyMy4wNSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTIzLjA1IDEyMy4wNTsiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBhdGggZD0iTTEyMS4zMjUsMTAuOTI1bC04LjUtOC4zOTljLTIuMy0yLjMtNi4xLTIuMy04LjUsMGwtNDIuNCw0Mi4zOTlMMTguNzI2LDEuNzI2Yy0yLjMwMS0yLjMwMS02LjEwMS0yLjMwMS04LjUsMGwtOC41LDguNQ0KCQljLTIuMzAxLDIuMy0yLjMwMSw2LjEsMCw4LjVsNDMuMSw0My4xbC00Mi4zLDQyLjVjLTIuMywyLjMtMi4zLDYuMSwwLDguNWw4LjUsOC41YzIuMywyLjMsNi4xLDIuMyw4LjUsMGw0Mi4zOTktNDIuNGw0Mi40LDQyLjQNCgkJYzIuMywyLjMsNi4xLDIuMyw4LjUsMGw4LjUtOC41YzIuMy0yLjMsMi4zLTYuMSwwLTguNWwtNDIuNS00Mi40bDQyLjQtNDIuMzk5QzEyMy42MjUsMTcuMTI1LDEyMy42MjUsMTMuMzI1LDEyMS4zMjUsMTAuOTI1eiIvPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=);
     background-size: 10px 10px;
+    
   }

@@ -109,19 +109,22 @@ export default  function Edicao(){
         return (
             <section>
               <header className="cabecalho">
-                <Link className="sair" to="/">
-                  SAIR
-                </Link>
-                <Link className="produto" to="/cadastro">
-                  CADASTRO DE PRODUTO
-                </Link>
-        
-                <div className="logo">
+               
+              <div className="logo">
                   <Link className="home" to="/">
                         <figure class="logo_contain"> <img src="/assets/images/logo.png" className="controle" alt="Logo" routerLink="/"/> </figure>
                   </Link>
                   <strong>RETRO GAMES</strong>
                 </div>
+               
+                <Link className="sairpags" to="/">
+                  SAIR
+                </Link>
+                <Link className="cadproduto" to="/cadastro">
+                  CADASTRO DE PRODUTO
+                </Link>
+        
+                
               </header>
         
               <div>

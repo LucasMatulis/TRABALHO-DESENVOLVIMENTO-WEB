@@ -46,18 +46,18 @@ body,html{
 
     .NovoUsuario1{
         position: relative;
-        left: 65%;
+        left: 64%;
         font: 80px retrofont ;
         color: #665cbe;
-        top: -100px;
+        top: -120px;
        
     }
     .NovoUsuario2{
         position: relative;
-        left: 60%;
+        left: 59%;
         font: 80px retrofont ;
         color: #665cbe;
-        top: -240px;
+        top: -260px;
 }
 
     div{
@@ -74,15 +74,18 @@ body,html{
                 padding-top: 55px;
             }
 
-            label{
+            .novousus{
                 position: relative;
                 display: flex;
                 flex-direction: column;
-                left: 726px;
+                left: 60%;
                 font: 32px gemunu;
                 font-weight: bolder;
+                margin-bottom: 40px;
 
-            input{
+
+
+            .novous{
                 position: relative;
                 width: 526px;
                 height: 65px;
@@ -90,22 +93,16 @@ body,html{
                 border: none;
                 font-size: larger;
                 border-radius: 25px;
-                left: 77%;
-                top: -190px;
+                top: -280px;
             }
         }
-        &:hover{
-            img{
-                transform: rotate(90deg);
-                visibility:inherit;
-            }
-        }
+       
 
     }
 
-    .entrar{
+    .entrarnu{
         position: relative;
-        left: 66%;
+        left: 69%;
         top: 100px;
         width: 281px;
         text-decoration: none;
@@ -113,7 +110,7 @@ body,html{
         color: #665cbe;
         background-color: transparent; 
         border:none;
-        top: -50px;
+        top: -110px;
         
 
       
@@ -122,8 +119,8 @@ body,html{
 
     .cadastrarBU{
         position: relative;
-        left: 66%;
-        top: 100px;
+        left: 64%;
+        top: -160px;
         width: 281px;
         text-decoration: none;
         font: 40px retrofont ;
@@ -141,107 +138,43 @@ body,html{
 
 }
 
+@media only screen and (max-width: 1430px) {
 
-@media (max-width: 820px){
+    .NovoUsuario1{
+       
+        left: 100%;
+        
+       
+    }
+    .NovoUsuario2{
+        
+        left: 10000px;
+        
+    }
 
-    .logo{
+
+    .novousus{
+        position: relative;
         display: flex;
         flex-direction: column;
-        
-        strong{
-            font: 13px inter;
-            font-weight: bolder;
-        }
-    
-    
-        img{
-        height: 42.5px;
-        width: 85.5px;
-        }
-    }
+        left: 5px;
+        font: 32px gemunu;
+        font-weight: bolder;
+        margin-bottom: 40px;
 
-    .Bloco1{
+
+
+    .novous{
         position: relative;
-        left: -600px;
-
-        .entrar{
-            position:relative;
-            top:200px;
-        }
-    }
-
-
-}
-
-@media (max-width: 414px) {
-
-    .Bloco1{
-        .Login{
-            position: relative;
-            left: 640px;
-            font: 70px retrofont;
-        }
-
-        div{
-            position: relative;
-            left: -80px;
-
-            label{
-
-            input{
-                width: 300px;
-
-            }
-        }
-
-        img{
-            left: 720px;
-        }
-
-        }
-
-        .entrar{
-            position: relative;
-            left: 675px;
-        }
-
+        width: 526px;
+        height: 65px;
+        background-color: white;
+        border: none;
+        font-size: larger;
+        border-radius: 25px;
+        top: -280px;
     }
 }
 
-@media (max-width: 375px) {
-
-    .Bloco1{
-
-        .Login{
-            position: relative;
-            left: 680px;
-            font: 40px retrofont;
-        }
-
-        div{
-            position: relative;
-            left: -50px;
-
-            label{
-
-            input{
-                width: 200px;
-
-            }
-        }
-
-        img{
-            left: 720px;
-        }
-
-        }
-
-        .entrar{
-            position: relative;
-            top: 100px;
-            left: 675px;
-            font: 30px retrofont;
-        }
-    }
-
 }
+

@@ -12,19 +12,22 @@ export default  function Adm(){
     return(
         <section>
                     <header className="logo">
-                    <Link className="home" to="/">
+                    <div className="logo">
+        <Link className="linkApp" to="/">
         <figure class="logo_contain"> <img src="/assets/images/logo.png" className="controle" alt="Logo" routerLink="/"/> </figure>
         </Link>
-                        <strong>RETRO GAMES</strong>
+     
+          <strong>RETRO GAMES</strong>
+        </div>
                     </header>
 
                 <div className="mundo">
 
-                    <h1 className="titulo"> BEM VINDO - {nome.toUpperCase()} </h1>
+                    <h1 className="tituloadm"> BEM VINDO - {nome.toUpperCase()} </h1>
 
-                    <Link className="editar" to="/cadastro">ADICIONAR ALGUM PRODUTO</Link>
-                    <Link className="adicionar" to="/edicao">EDITAR ALGUM PRODUTO</Link>
-                    <Link className="voltar" to="/">SAIR</Link>
+                    <Link className="editaradm" to="/cadastro">ADICIONAR ALGUM PRODUTO</Link>
+                    <Link className="adicionaradm" to="/edicao">EDITAR ALGUM PRODUTO</Link>
+                    <Link className="voltaradm" to="/">SAIR</Link>
 
                 </div>
         </section>

@@ -59,22 +59,28 @@ export default  function Login(){
         <figure class="logo_contain"> <img src="/assets/images/logo.png" className="controle" alt="Logo" routerLink="/"/> </figure>
         </Link>
      
-          <strong className='loginstrong'>RETRO GAMES</strong>
+          <strong className='strongbranca'>RETRO GAMES</strong>
         </div>
                 </header>
                 
                 <div className="Bloco1">
+
+                   
+                    
+                   
+
+
                     <h1 className="Login">LOGIN</h1>
                     <div className="InsiraNome">
                       
-                        <label>Insira seu nome<input type="text" value={nome} placeholder="Nome" onChange={(e)=>setNome(e.target.value)}/></label>
+                        <label className='loogin'>Insira seu nome<input className='looogin' type="text" value={nome} placeholder="Nome" onChange={(e)=>setNome(e.target.value)}/></label>
                     </div>
                     <div className="InsiraSenha">
                        
-                        <label>Insira sua Senha<input type="password" value={senha} placeholder="Senha" onChange={(e)=> setSenha(e.target.value)}/></label>
+                        <label className='loogin'>Insira sua Senha<input className='looogin' type="password" value={senha} placeholder="Senha" onChange={(e)=> setSenha(e.target.value)}/></label>
                     </div>
-                    <button to={nome ? `/adm/${nome}` : '/login'} className="entrar" onClick={verificarUsuario}>ENTRAR</button>
-                    <Link to="/novoUsu" className="cadastrar">CADASTRAR</Link>
+                    <button to={nome ? `/adm/${nome}` : '/login'} className="entrarlogin" onClick={verificarUsuario}>ENTRAR</button>
+                    <Link to="/novoUsu" className="cadastrarlogin">CADASTRAR</Link>
                     
                 </div>
         </section>

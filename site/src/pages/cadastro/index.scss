@@ -14,27 +14,55 @@
   }
 
 
+.cabecalho{
 
+  align-items: center;
+left: 1044px;
 
-    a{
-        position: relative;
-        text-decoration: none;
-        font: 16px inter ;
-        height:fit-content;
-        top: 20px;
-        color: black;
+.editproduto{
+  
+    position: relative;
+    text-decoration: none;
+    
+    background-color: #665cbe;
+    left:1%;
+    width: 170px;  
+    height: 60px;
+    font: 30px inter ;
+    padding: 19px;
+  color: black ;
+  border-radius: 20px;
+  font-weight: bold;
+  top:10px;
+  
+}
 
-        &:hover{
-            text-decoration: underline;
-        }
-    }
+.sairpags{
+  position: relative;
+  text-decoration: none;
+  
+  background-color: #665cbe;
+  left:75%;
+  width: 68px;  
+  height: 40px;
+  font: 30px inter ;
+  padding: 9px;
+color: black ;
+border-radius: 20px;
+font-weight: bold;
+
+}
+
+  
+}
+    
 
     
   .cadastrostrong{
     color: white;
   }
   
-  
+
   
 
   div{
@@ -58,6 +86,9 @@
       background-color: #665cbe;
       position: relative;
       left: 15%;
+      border-radius: 25px;
+      border-color: solid 5px rgba(0, 0, 0, 0.35);
+
 
       .imagem{
         display: flex;
@@ -66,18 +97,14 @@
         position: relative;
         left: 3%;
         top: 3%;
+        border-radius: 25px;
+
           .stock{
             height: 281px;
             width: 300px;
             border-radius: 25px;
           }
 
-          .link{
-            background-color: #C2B7B4;
-            border-radius: 25px;
-            border: none;
-            font: 13px inter;
-          }
       }
 
       .inputs{
@@ -86,12 +113,14 @@
         gap: 10px;
         position: relative;
         top: 3%;
+        
 
         label{
           position: relative;
           left: 10%;
           font: 20px inter;
           font-weight: bold;
+          
           
         }
 
@@ -103,6 +132,7 @@
           font: 40px inter;
           font-weight: bold;
           color: #665cbe;
+         
 
           &:hover{
             cursor: pointer;

@@ -28,14 +28,15 @@ export default function Produto(){
     return(
         <section className="tela">
             <header className="cabecalho">
-                <Link className="sair"  to="/">Voltar</Link>
-                <Link className="sair"  to="/login">Login</Link>
-                <div className="logo">
+            <div className="logo">
                     <Link className="home" to="/">
                         <figure class="logo_contain"> <img src="/assets/images/logo.png" className="controle" alt="Logo" routerLink="/"/> </figure>
                     </Link>
                     <strong>RETRO GAMES</strong>
                 </div>
+                <Link className="sairpags"  to="/">Voltar</Link>
+                <Link className="prodplogin"  to="/login">Login</Link>
+                
             </header>
 
 
@@ -47,8 +48,8 @@ export default function Produto(){
                        <img src={`http://localhost:5000/${item.imagem}`} alt="" className="stock" />
                    </div>
                    <div className="inputs">
-                       <h1 className="name">{item.nome}</h1>
-                       <h2 className="precoo">R$ {item.preco}</h2>
+                       <h1 className="nameprod">{item.nome}</h1>
+                       <h2 className="precooprod">R$ {item.preco}</h2>
                    </div>
                 </div>
            </div>

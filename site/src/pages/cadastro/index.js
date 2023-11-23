@@ -66,15 +66,18 @@ export default function Cadastro(){
     return(
         <section className="tela">
             <header className="cabecalho">
-                <Link className="sair"  to="/">SAIR</Link>
-                <Link className="produto" to="/edicao">EDIÇÃO DE PRODUTO</Link>
-
-                <div className="logo">
+            <div className="logo">
                 <Link className="home" to="/">
                 <figure class="logo_contain"> <img src="/assets/images/logo.png" className="controle" alt="Logo" routerLink="/"/> </figure>
                 </Link>
-                <strong className="cadastrostrong">RETRO GAMES</strong>
+                <strong>RETRO GAMES</strong>
                 </div>
+                
+                <Link className="sairpags"  to="/">SAIR</Link>
+
+                <Link className="editproduto" to="/edicao">EDIÇÃO DE PRODUTO</Link>
+
+                
             </header>
 
             <div>
