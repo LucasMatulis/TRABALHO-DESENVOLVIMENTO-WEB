@@ -65,11 +65,6 @@ export default  function Login(){
                 
                 <div className="Bloco1">
 
-                   
-                    
-                   
-
-
                     <h1 className="Login">LOGIN</h1>
                     <div className="InsiraNome">
                       

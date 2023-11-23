@@ -231,6 +231,53 @@ border-radius: 10%;
 border: 3px solid #665cbe;
 }
 
+.faixa6{
+
+  .loguinho{
+    width: 25px;
+    height: 20px;
+
+  }
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    bottom: -240px;
+    background-color: #23272a;
+    width: 100%;
+    gap: 100px;
+    div{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        left: 350px;
+        gap: 10px;
+        padding-top: 100px;
+        padding-bottom: 50px;
+        div{
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            left: -150px;
+        }
+    }
+    p{
+        font: 17px discordfont2;
+        text-align: left;
+        line-height: 35px;
+        color: white;
+    }
+    a{
+        font: 17px discordfont2;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
 
 
 

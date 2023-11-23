@@ -13,11 +13,19 @@
     src: url(../../../public/assets/fonts/Gemunu.ttf);
   }
 
+  @font-face {
+    font-family: discordfont2;
+    src: url(../../../public/assets/fonts/discordfont2.woff2);
+  }
+
 
 .Entrada{
     width: 100%;
     height: 1070px;
    background: linear-gradient(200deg,black,black,black,black,black,black,rgb(18, 32, 37),rgb(19, 19, 93), rgb(11, 11, 58));
+   background-image: url("../../../public/assets/images/Bowser.webp");
+   background-repeat: no-repeat;
+   background-size: 60%;
 
 }
 
@@ -115,15 +123,9 @@
 
 @media only screen and (max-width: 1366px){
 
-    .login{
-        left:12xp;
+    .Bloco1{
+        left:10%;
     }
-
-
-        .loogin{
-            left: 12px;
-        }
-
 
 }
 
