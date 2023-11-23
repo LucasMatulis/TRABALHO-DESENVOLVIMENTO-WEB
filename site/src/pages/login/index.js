@@ -53,7 +53,7 @@ export default  function Login(){
     return(
         
         <section className='Entrada'>
-                <header className="logo">
+                <header className="logoentrada">
                 <div className="logo">
         <Link className="home" to="/">
         <figure class="logo_contain"> <img src="/assets/images/logo.png" className="controle" alt="Logo" routerLink="/"/> </figure>
