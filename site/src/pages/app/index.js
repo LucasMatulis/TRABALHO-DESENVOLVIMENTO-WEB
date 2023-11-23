@@ -45,10 +45,10 @@ export default  function App() {
         </Link>
       </header>
 
-        <body className='home'>
+      <body className="home">
                   {jogosFiltrados.map((item) => (
-                    <Link to={`/produto/${item.id}`}>
-                      <div class="slider-container" key={item.id}>                    
+                    <Link to={`/produto/${item.id}`} className="game-item">
+                      <div class="slider-container" key={item.id} >                    
                               <div class="slide-content">
                                   <div class="card-wrapper">
                                       <div class="card">

@@ -122,6 +122,16 @@ li{
   display: flex;
   align-items: center;
   justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; // Distribui os itens igualmente na linha
+
+  .game-item {
+    flex: 0 0 calc(25% - 20px); // Define a largura de cada item (25% de largura para 4 itens por linha)
+    margin-bottom: 20px; // Espaçamento entre os itens
+    box-sizing: border-box; // Para incluir margem no cálculo de largura
+    // Estilos dos itens individuais
+  }
 
 }
 
@@ -157,6 +167,7 @@ object-fit: cover;
 border-radius: 10%;
 border: 3px solid #4169e1;
 }
+
 
 
 
