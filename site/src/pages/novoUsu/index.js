@@ -28,7 +28,7 @@ export default  function NovoUsu(){
                   senha: senha
               }
   
-              let r = await axios.post('http://20.197.242.211:5000/adm', body);
+              let r = await axios.post('http://localhost:5000/adm', body);
               let id = r.data.id;
   
               alert("Usuário cadastrado. Id: " + id);
@@ -39,7 +39,7 @@ export default  function NovoUsu(){
   }  
 
       async function buscarUsuario() {
-        let r = await axios.get('http://20.197.242.211:5000/adm');
+        let r = await axios.get('http://localhost:5000/adm');
         let usuarios = r.data;
     
         setListaUsuarios(usuarios);

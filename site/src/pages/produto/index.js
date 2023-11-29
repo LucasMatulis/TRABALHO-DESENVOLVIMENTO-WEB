@@ -11,7 +11,7 @@ export default function Produto(){
 
     async function buscarJogoId(){
 
-        let r = await axios.get(`http://20.197.242.211:5000/jogo/${id}`);
+        let r = await axios.get(`http://localhost:5000/jogo/${id}`);
         let jogo = r.data;
         setJogo(jogo);
         console.log(jogo)
@@ -45,7 +45,7 @@ export default function Produto(){
                 <div>
                 <div  className="cadastro">
                    <div className="imagem">
-                       <img src={`http://20.197.242.211:5000/${item.imagem}`} alt="" className="stock" />
+                       <img src={`http://localhost:5000/${item.imagem}`} alt="" className="stock" />
                    </div>
                    <div className="inputs">
                        <h1 className="nameprod">{item.nome}</h1>
