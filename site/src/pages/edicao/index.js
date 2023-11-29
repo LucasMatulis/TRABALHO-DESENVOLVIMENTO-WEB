@@ -17,7 +17,7 @@ export default  function Edicao(){
 
 
         async function buscarJogo() {
-            let r = await axios.get('http://localhost:5000/jogo');
+            let r = await axios.get('http://20.197.242.211:5000/jogo');
             let jogos = r.data;
         
             setListaJogos(jogos);
@@ -48,10 +48,10 @@ export default  function Edicao(){
             }
 
             try {
-                let r = await axios.put(`http://localhost:5000/jogo/${jogoAtualizado.id}`, jogoAtualizado);
+                let r = await axios.put(`http://20.197.242.211:5000/jogo/${jogoAtualizado.id}`, jogoAtualizado);
 
                 if (arquivo) {
-                r = await axios.put(`http://localhost:5000/jogo/${jogoAtualizado.id}/capa`, formData, {
+                r = await axios.put(`http://20.197.242.211:5000/jogo/${jogoAtualizado.id}/capa`, formData, {
                     headers: { 'Content-Type': 'multipart/form-data' },
                 });
                 }
@@ -74,12 +74,12 @@ export default  function Edicao(){
                 const idInfo=id
 
                 try {
-                        let response = await axios.delete(`http://localhost:5000/jogo/${id}`);
+                        let response = await axios.delete(`http://20.197.242.211:5000/jogo/${id}`);
                         alert("Jogo Deletado. Id: " + idInfo);
                         buscarJogo();                    
                       } catch (error) {
                         console.error("Erro ao deletar jogo:", error);
-                        console.log(`http://localhost:5000/jogo/${id}`)
+                        console.log(`http://20.197.242.211:5000/jogo/${id}`)
                 }           
             }
                 else{
@@ -134,7 +134,7 @@ export default  function Edicao(){
                     <li key={item.id}>
                       <div className="cadastro">
                         <div className="imagem">
-                          <img src={`http://localhost:5000/${item.imagem}`} className="stock" alt="Imagem do Jogo"/>
+                          <img src={`http://20.197.242.211:5000/${item.imagem}`} className="stock" alt="Imagem do Jogo"/>
                           <input type="file" accept="image/*" className="link" onChange={(e) => setArquivo(e.target.files[0])}/>
                         </div>
                         <div className="inputs">
