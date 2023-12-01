@@ -138,43 +138,38 @@ body,html{
 
 }
 
-@media only screen and (max-width: 1430px) {
 
-    .NovoUsuario1{
-       
-        left: 100%;
-        
-       
-    }
-    .NovoUsuario2{
-        
-        left: 10000px;
-        
-    }
+@media only screen and (max-width: 430px) {
+
+    .Bloco1{
 
 
-    .novousus{
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        left: 5px;
-        font: 32px gemunu;
-        font-weight: bolder;
-        margin-bottom: 40px;
+        .NovoUsuario1{
+            top: -70px;
+            font: 50px retrofont ;
+        }
+        .NovoUsuario2{
+            top: -150px;
+            font: 50px retrofont ;
+            padding-bottom: 100px;
+        }
+        div{
+            .novousus{
+                .novous{
+                    width: 80%;
+                }
+            }
+        }
 
+        .entrarnu{
+            font: 30px retrofont ;
+            top: -220px;
+        }
 
-
-    .novous{
-        position: relative;
-        width: 526px;
-        height: 65px;
-        background-color: white;
-        border: none;
-        font-size: larger;
-        border-radius: 25px;
-        top: -280px;
-    }
-}
-
-}
+        .cadastrarBU{
+            top: -260px;
+            font: 30px retrofont ;
+        }
+    }   
+  }
 
