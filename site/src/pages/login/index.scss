@@ -142,8 +142,13 @@
   @media only screen and (max-width: 900px) {
     
     .Bloco1{
-        left:-20%;
+        left:-40%;
     }
+
+    .Entrada{
+        background-image: none;
+    }
+
   
 
   }
@@ -161,6 +166,35 @@
     
     .Bloco1{
         left:-60%;
+
+        .Login{
+            font: 50px retrofont ;
+            position: relative;
+        }
+    
+        .loogin {
+            .looogin {
+              width: 80%; 
+            }
+          }
+
+        .entrarlogin{
+            font: 20px retrofont ;
+        }
+        .cadastrarlogin{
+            font: 20px retrofont ;
+            top: 10%;
+            left: 80%;
+        }
+    }
+
+    .strongbranca{
+        display: none;
+    }
+
+    .logoentrada{
+        position: relative;
+        top: -2%;
     }
   }
 
